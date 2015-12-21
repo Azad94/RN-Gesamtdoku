@@ -1,0 +1,13 @@
+\select@language {ngerman}
+\contentsline {section}{\numberline {1}Versuch 1 Schichtenmodell}{2}{section.1}
+\contentsline {subsection}{\numberline {1.1}Aufgabe 2 \IeC {\"U}berlegungen f\IeC {\"u}r das Spiel Vier gewinnt}{2}{subsection.1.1}
+\contentsline {subsection}{\numberline {1.2}Aufgabe 4 Vor- und Nachteile der Realisierung}{3}{subsection.1.2}
+\contentsline {subsection}{\numberline {1.3}Aufgabe 5 Verbesserte Kommunikation durch Stifte}{3}{subsection.1.3}
+\contentsline {section}{\numberline {2}Versuch 2 Zuverl\IeC {\"a}ssige Daten\IeC {\"u}bertragung}{5}{section.2}
+\contentsline {subsection}{\numberline {2.1}Aufgabe 2 Messung der H\IeC {\"a}ufigkeit von Rahmenverlusten}{5}{subsection.2.1}
+\contentsline {subsection}{\numberline {2.2}Aufgabe 3 Messung der Bitfehlerrate}{5}{subsection.2.2}
+\contentsline {section}{\numberline {3}Versuch 3 Anwendungsschicht und Tools}{6}{section.3}
+\contentsline {subsection}{\numberline {3.1}Aufgabe 4 ns lookup tool}{6}{subsection.3.1}
+\contentsline {section}{\numberline {4}Versuch 4 Switch}{7}{section.4}
+\contentsline {section}{\numberline {5}Versuch 5 Router}{8}{section.5}
+\contentsline {section}{\numberline {6}Versuch 6 Transportschicht}{9}{section.6}

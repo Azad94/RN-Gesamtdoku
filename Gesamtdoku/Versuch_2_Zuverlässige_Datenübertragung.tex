@@ -1,0 +1,150 @@
+\documentclass{scrartcl}
+
+% input encoding
+\usepackage[utf8]{inputenc}
+
+% new german spelling
+\usepackage[ngerman]{babel}
+
+% choose font
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+
+% KOMA-Script options
+\KOMAoptions{%
+  parskip=full,%
+  fontsize=12pt,
+  DIV=calc}
+
+% color and images
+\usepackage{xcolor}
+\usepackage{graphicx}
+
+% quotes
+\usepackage[german=guillemets]{csquotes}
+
+% math
+\usepackage{amsmath}
+\usepackage{ulem}
+
+% set special behaviour for hyperlinks in pdfs
+\usepackage[breaklinks=true]{hyperref}
+
+% Tabelle einbinden in Text
+\usepackage{wrapfig}
+
+\begin{document}
+  \title{Rechnernetze Dokumentation}
+  \author{Sheraz Azad und Sven Marquardt}
+  \date{Wintersemester 2015/16}
+  \maketitle
+  
+  \tableofcontents
+ 
+  \newpage
+\section[Versuch 1 Schichtenmodell]{Schichtenmodell}  
+  \subsection[Aufgabe 2 Überlegungen für das Spiel Vier gewinnt]{Überlegungen für das Spiel Vier gewinnt}
+  
+  Die Kommunikation untereinander findet mittels einer Münze statt, welche hochgehalten wird, wobei wir den Binärcode verwenden. Zeigt die Münze Kopf stellt diese die 0 dar und zeigt die Münze Zahl stellt sie die 1 dar. Damit die beiden Positionen unterscheidbar sind, wird die Münze pro Position, also entweder Kopf (0) oder Zahl (1), jeweils für 2 Sekunden hochgehalten erst danach findet ein Positionswechsel statt.
+    
+  Damit eine gregelte und sinnvolle Kommunikation zwischen den Kommunikationspartnern stattfinden kann, wurden Kommunikationsregeln festgelegt. Das Spiel Vier gewinnt hat 7 Reihen mit jeweils 6 Feldern, da wir bei diesem Spiel nur die Spaltenangabe brauchen um unseren Spielzug zu machen, wurden 3 Bits verwendet von 001 (1) bis 111 (7) welche die einzelnen Spalten darstellen.
+  \textbf{HIER EIN BILD VON EINEM VIER GEWINNT SPIELFELD}\\
+  \textbf{HIER FEHLT NOCH WIE MAN ENTSCHEIDET WER ALS ERSTES DRAN IST}
+  
+  Weitere Bitcodierungen für die Kommunikation sind:
+ %TABELLE SOLL NOCH IM TEXTFLUSS UNTEN SEIN  
+
+   \begin{table}
+    \centering
+    \begin{tabular}{l||lr}
+      \textbf{Bitfolge} & \textbf{Bedeutung} \\ \hline
+        001 & Reihe voll \\
+      110 & Gewonnen \\
+      101 & Unentschieden \\
+      011 & Weiter \\
+      100 & Fertig \\
+      111 & Nochmal bei Fehlübertragung 
+    \end{tabular}
+    \end{table}
+  
+  \textbf{HIER EIN BEISPIEL FÜR DEN SPIELFLUSS DEN ENTWEDER ICH IN LÜBECK ODER SVEN HAT}
+  
+ \begin{table}
+    \centering
+    \caption{Hybrides Modell}
+    \begin{tabular}{l|ll}
+      5. Anwendungschicht & Das Spiel "Vier gewinnt" \\ \hline
+      4. Transportschicht & Wird nicht verwendet \\ \hline
+      3. Vermittlungsschicht & Wird nicht verwendet \\ \hline
+      2. Sicherungsschicht & Übersetzen der Kommunikation in Bits und Fehlererkennung \\ \hline
+      1. Bitübertragungsschicht & Übertragung von 0 und 1 durch Medium Münze\\ 
+     \end{tabular}
+\end{table}
+
+ \subsection[Aufgabe 4 Vor- und Nachteile der Realisierung]{Vor- und Nachteile der Realisierung}
+
+Zweierteam mit dem die Analyse der Spielrealisierung gemacht wurde bestand aus Malte Grebe und Niklas Klatt. 
+ 
+ \textbf{Vorteile:}\\
+ Aufgrund der Kommunikationsregeln ist das Spiel leicht zu verstehen und zu bedienen. Durch die ständige Überprüfung wird dafür gesorgt, das keine Fehler bei der Übertragung auftreten. Dadurch das ein Weiter (011) erwartet wird, gibt es Spielpausen und man kann in Ruhe sein Spielfeld aktualisieren. 
+ 
+ \textbf{Nachteile:}\\
+  Ein Zug dauert ca. eine Minute, da jede Position zwei Sekunden gehalten wird. Spieler 1 oder 2 fängt zu früh mit der Übertragung vom nächsten Spielzug an, dadurch gibt es eine Fehlerübertragung die wiederholt werden muss.
+  
+  \textbf{Verbesserte Spielrealisierung:}\\
+  Einführung einer Spielfeldsynchronisierung um sicherzustellen, das keine Fehler beim Eintragen der Positionen eingetreten sind. 
+  
+  \subsection[Aufgabe 5 Verbesserte Kommunikation durch Stifte]{Verbesserte Kommunikation durch Stifte}
+  
+  Es gibt zwei Varianten die Kommunikation druch Stifte zu verbessern.
+  
+  Die \textbf{erste Variante} ist, das man einen waagerechten Sitft als 0 und einen senkrechten Stift als 1 interpretiert. Dadurch lassen sich die drei Kommunikationsbit leicht, schnell und eindeutig darstellen.
+  
+  \textbf{HIER EINE ZEICHNUNG MIT HALBWINKEL UND DIE BITS ZU DEN WINKELN}
+  
+  Die \textbf{zweite Variante} ist, dass man die Stifte in bestimmten Winkel hinlegt. Hier können wir zum Beispiel sagen das wenn der Stift in einem 90 Grad Winkel liegt, dieser die Bitfolge 001 für Reihe voll darstellt. So können wir die verschiedenen Bitfolgen angeben und bräuchten mit dieser Variante sogar nur einen Stift statt drei.
+  
+   \subsection[Aufgabe 6 Kommunikation durch Klatschen]{Kommunikation durch Klatschen}
+   
+   \textbf{Problem}\\
+   Dadurch das alle Teams zeitgleich angefangen haben zu klatschen, konnte man nicht unterscheiden ob das Klatschgeräusch vom gegenüber sitzenden Kommunikationspartner kam, oder von einem Kommilitonen aus einer anderen Gruppe. Aufgrund dieser Tatsache sind bei allen Teams Fehler bei der Kommunikation entstanden.
+   
+   \textbf{Lösung}\\
+   Auch hier gibt es zwei Lösungsansätze, 
+  
+  
+  
+%----------------------------------------------------------------------------------------------------------------------------
+  \newpage
+\section[Versuch 2 Zuverlässige Datenübertragung]{Zuverlässige Datenübertragung}
+  \subsection[Aufgabe 2 Messung der Häufigkeit von Rahmenverlusten]{Messung der Häufigkeit von Rahmenverlusten}
+  
+  Jedes mal wenn der Client einen Rahmen sendet erhöht der Server einen Counter für einen empfangenen Rahmen um eins. Nachdem die Übertragung statt gefunden hat, kann der Server nun überprüfen ob es einen Rahmenverlust gab, indem er die Datei aufruft und die Differenz zwischen der Länge der Datei und dem Counter berechnet. \\
+Rahmen insgesamt - Empfangene  Rahmen = Verlorene Rahmen.\\
+Wenn die Differenz null beträgt, dann ist kein Rahmenverlust aufgetreten.
+
+  \subsection[Aufgabe 3 Messung der Bitfehlerrate]{Messung der Bitfehlerrate}
+%----------------------------------------------------------------------------------------------------------------------------
+ 
+ 
+  \newpage
+\section[Versuch 3 Anwendungsschicht und Tools]{Anwendungsschicht und Tools}
+
+  \subsection[Aufgabe 4 ns lookup tool]{ns lookup tool}
+%----------------------------------------------------------------------------------------------------------------------------
+
+
+  \newpage
+\section[Versuch 4 Switch]{Switch}
+%----------------------------------------------------------------------------------------------------------------------------
+
+
+  \newpage
+\section[Versuch 5 Router]{Router}
+%----------------------------------------------------------------------------------------------------------------------------
+ 
+ 
+  \newpage
+\section[Versuch 6 Transportschicht]{Transportschicht}
+  
+\end{document}
