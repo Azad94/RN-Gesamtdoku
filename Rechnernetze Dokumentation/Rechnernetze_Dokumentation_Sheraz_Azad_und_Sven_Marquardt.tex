@@ -30,8 +30,6 @@
 % set special behaviour for hyperlinks in pdfs
 \usepackage[breaklinks=true]{hyperref}
 
-% Tabelle einbinden in Text
-\usepackage{wrapfig}
 
 \begin{document}
   \title{Rechnernetze Dokumentation}
@@ -54,9 +52,7 @@
   Weitere Bitcodierungen für die Kommunikation sind:
  %TABELLE SOLL NOCH IM TEXTFLUSS UNTEN SEIN  
 
-   \begin{table}
-    \centering
-    \begin{tabular}{l||lr}
+    \begin{tabular}{|r|r}
       \textbf{Bitfolge} & \textbf{Bedeutung} \\ \hline
         001 & Reihe voll \\
       110 & Gewonnen \\
@@ -65,8 +61,7 @@
       100 & Fertig \\
       111 & Nochmal bei Fehlübertragung 
     \end{tabular}
-    \end{table}
-  
+    
   \textbf{HIER EIN BEISPIEL FÜR DEN SPIELFLUSS DEN ENTWEDER ICH IN LÜBECK ODER SVEN HAT}
   
  \begin{table}
@@ -130,10 +125,19 @@ Zweierteam mit dem die Analyse der Spielrealisierung gemacht wurde bestand aus M
     
     Auch hier bekommt jeder Teilnehmer eine \textbf{eindeutige} Adresse, wobei diese jedoch noch die Informationen Gebäude-, Raum-, Reihen- und Sitznummer beinhalten. Die Nachricht wird somit anhand dieser ausführlichen Informationen an den jeweiligen Teilnehmer gesendet.
     
+    Diese Fragestellung bezieht sich auf die Vermittlungsschicht, da jeder Teilnehmer aufgrund der eindeutigen Adresse mit jedem anderenen (bestimmten) Teilnehmer kommunizieren kann.
     
-  
-  
-  
+     \subsection[Aufgabe 9 Datenfluss Problem]{Datenfluss Problem}
+     
+     \textbf{Problem}\\
+     Bei einem worst-case-scenario erhält ein spezieller Teilnehmer soviele Informationen von anderen Teilnehmern, das er keinen Platz bzw keine Zeit mehr hat sich die Informationen zu notieren. Folglich gehen dadurch Informationen verloren und diese werden ein weiteres mal an denselben Teilnehmer gesendet, welches das Problem in die Länge zieht.
+     
+     \textbf{Lösung}\\
+     Um den Informationsfluss zu stoppen oder zu kontrollieren schickt der spezielle Teilnehmer bei Bedarf eine Nachricht an die Teilnehmer das diese entweder langsamer senden sollen oder nur eine bestimmte Anzahl an Informationen senden dürfen. Bleibt das Problem weiterhin bestehen, schickt der spezielle diese Nachricht solange bis der Informationsfluss für ihn verarbeitbar ist.
+     Außerdem können weitere spezielle Teilnehmer eingeteilt werden um den Informationsfluss an mehrere spezielle Teilnehmer zu verteilen und dadurch den Arbeitsaufwand eines speziellen Teilnehmers zu senken.
+     
+     Diese Fragestellung bezieht sich auf die Transportsschicht, da es sich hierbei um eine Staukontrolle handelt, damit ein Teilnehmer seine Informationsrate zu schicken mindert, wenn das Netz überlastet ist.
+
 %----------------------------------------------------------------------------------------------------------------------------
   \newpage
 \section[Versuch 2 Zuverlässige Datenübertragung]{Zuverlässige Datenübertragung}
