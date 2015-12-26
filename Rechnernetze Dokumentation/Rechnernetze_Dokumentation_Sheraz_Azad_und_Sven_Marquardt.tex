@@ -19,6 +19,7 @@
 % color and images
 \usepackage{xcolor}
 \usepackage{graphicx}
+\graphicspath{{/Users/Sheraz/Documents/Latex/RechnernetzeDokumentation/Gesamtdoku/Bilder/}}
 
 % quotes
 \usepackage[german=guillemets]{csquotes}
@@ -38,21 +39,24 @@
   \maketitle
   
   \tableofcontents
- 
+  \textbf{ALLE BILDER UND TABELLEN MÜSSEN IN DEN TEXTFLUSS EINGEBUNDEN WERDEN}
+  
+%---------------------------------------------------------------------------------------------------------------------------- 
   \newpage
 \section[Versuch 1 Schichtenmodell]{Schichtenmodell}  
-  \subsection[Aufgabe 2 Überlegungen für das Spiel Vier gewinnt]{Überlegungen für das Spiel Vier gewinnt}
+  \subsection[Aufgabe 2 Überlegungen für das Spiel Vier gewinnt]{Überlegungen für das Spiel ''Vier gewinnt''}
   
   Die Kommunikation untereinander findet mittels einer Münze statt, welche hochgehalten wird, wobei wir den Binärcode verwenden. Zeigt die Münze Kopf stellt diese die 0 dar und zeigt die Münze Zahl stellt sie die 1 dar. Damit die beiden Positionen unterscheidbar sind, wird die Münze pro Position, also entweder Kopf (0) oder Zahl (1), jeweils für 2 Sekunden hochgehalten erst danach findet ein Positionswechsel statt.
     
-  Damit eine gregelte und sinnvolle Kommunikation zwischen den Kommunikationspartnern stattfinden kann, wurden Kommunikationsregeln festgelegt. Das Spiel Vier gewinnt hat 7 Reihen mit jeweils 6 Feldern, da wir bei diesem Spiel nur die Spaltenangabe brauchen um unseren Spielzug zu machen, wurden 3 Bits verwendet von 001 (1) bis 111 (7) welche die einzelnen Spalten darstellen.
+  Damit eine geregelte und sinnvolle Kommunikation zwischen den Kommunikationspartnern stattfinden kann, wurden Kommunikationsregeln festgelegt. Das Spiel ''Vier gewinnt'' hat 7 Reihen mit jeweils 6 Feldern, da wir bei diesem Spiel nur die Spaltenangabe brauchen um unseren Spielzug zu machen, wurden 3 Bits verwendet von 001 (1) bis 111 (7) welche die einzelnen Spalten darstellen.
+  
   \textbf{HIER EIN BILD VON EINEM VIER GEWINNT SPIELFELD}\\
   \textbf{HIER FEHLT NOCH WIE MAN ENTSCHEIDET WER ALS ERSTES DRAN IST}
   
   Weitere Bitcodierungen für die Kommunikation sind:
  %TABELLE SOLL NOCH IM TEXTFLUSS UNTEN SEIN  
 
-    \begin{tabular}{|r|r}
+    \begin{tabular}{|c|l}
       \textbf{Bitfolge} & \textbf{Bedeutung} \\ \hline
         001 & Reihe voll \\
       110 & Gewonnen \\
@@ -62,13 +66,13 @@
       111 & Nochmal bei Fehlübertragung 
     \end{tabular}
     
-  \textbf{HIER EIN BEISPIEL FÜR DEN SPIELFLUSS DEN ENTWEDER ICH IN LÜBECK ODER SVEN HAT}
+  \textbf{HIER EIN BEISPIEL FÜR DEN SPIELFLUSS DEN ENTWEDER ICH IN LÜBECK HABE}
   
  \begin{table}
     \centering
     \caption{Hybrides Modell}
     \begin{tabular}{l|ll}
-      5. Anwendungschicht & Das Spiel "Vier gewinnt" \\ \hline
+      5. Anwendungschicht & Das Spiel ''Vier gewinnt'' \\ \hline
       4. Transportschicht & Wird nicht verwendet \\ \hline
       3. Vermittlungsschicht & Wird nicht verwendet \\ \hline
       2. Sicherungsschicht & Übersetzen der Kommunikation in Bits und Fehlererkennung \\ \hline
@@ -148,26 +152,161 @@ Rahmen insgesamt - Empfangene  Rahmen = Verlorene Rahmen.\\
 Wenn die Differenz null beträgt, dann ist kein Rahmenverlust aufgetreten.
 
   \subsection[Aufgabe 3 Messung der Bitfehlerrate]{Messung der Bitfehlerrate}
-%----------------------------------------------------------------------------------------------------------------------------
  
- 
+  \subsection[Aufgabe 4 Vorüberlegungen zum sicheren Protokoll]{Vorüberlegungen zum sicheren Protokoll}
+  
+  Um Rahmenverluse und Bitfehler zu kompensieren, gibt es viele Möglichkeiten, wobei folgende Maßnahmen in der zu diesem Pariktum zugehörigen Vorlesung und in anderen Vorlesungen wie Verteile Systeme vorgestellt wurden.
+  
+    \begin{enumerate}
+    \item Die einfachste Möglichkeit ist einen \textbf{Timer} bei senden von Daten zu starten, welcher auf der Serverseite implementiert wird. Wenn nach einer bestimmten keine Rückmeldung vom Client empfangen wird, dann schickt der Server dieses Datenpaket noch einmal. Die Rückmeldung ist das Prinzip der Quittungen (Acknowledgements), welche entweder postiv (Datenpaket angekommen) oder negativ (Datenpaket nicht angekommen) sein können.
+    \item Passend zu dem Prinzip der oben genannten Quittungen, könnte man auch das dazu passende \textbf{Stop-and-Wait Protokoll} implementieren. Hierbei darf der Sender nur dann ein Datenpaket senden, wenn er von dem zuvor gesendeten Datenpaket eine Quittung vom Empfänger erhält. Falls die Quittung negativ ist wird das Datenpaket erneut gesendet, ansonsten das nächste Datenpaket welches an der Reihe ist, wie oben schon erwähnt wurde.
+    \item Um Duplikate zu verhindern kann man \textbf{Sequenznummern} verwenden. Wenn z.B. die Quittung vom Empfänger an den Sender verloren geht und dieser nach dem Tiemout das Datenpaket erneut sendet, hat der Empfänger redundante Datenpakete. Dieser kann dann anhand der Sequenznummern das er dieses Datenpaket schon empfangen hat, verwirft das zweite redundante Datenpaket und verschickt erneut eine positive Quittung an den Sender. 
+    \item Eine weitere Methode ist es ein \textbf{Paritätsbit} (Parity byte) zu verwenden. Dieses Paritätsbit wird an die Bits des Datenpakets angehängt und berechnet sich aus der Summe aller Bits. Wenn die Summer der Bits gerade ist, ist das Paritätsbit ''0'', ist die Summe jedoch ungerade, ist das Paritätsbit ''1''. Das Problem mit dem Paritätsbit jedoch ist das Fehler eventuell nicht entdeckt werden. Haben wir zum Beispiel Bytefolge ''01000001'' ergibt sich das Paritätsbit ''0'' dafür. Entstehen hier jedoch zum Beispiel zwei Bitfehler wird aus der Bytfolge ''10000010'', die Bytefolge ''10101010'' aus dem sich ebenfalls das Paritätsbit ''0'' berechnen lässt. Allgemein bedeutet das, dass sich eine gerade Anzahl von Fehlern aufhebt und nur eine ungerade Anzahl von Fehlern das Paritätsbit ändert. 
+  \end{enumerate}
+  
+  \subsection[Aufgabe 6 Verhinderung von Rahmenverlusten]{Verhinderung von Rahmenverlusten}
+
+%----------------------------------------------------------------------------------------------------------------------------  
   \newpage
 \section[Versuch 3 Anwendungsschicht und Tools]{Anwendungsschicht und Tools}
 
-  \subsection[Aufgabe 4 ns lookup tool]{ns lookup tool}
+  \subsection[Aufgabe 4 nslookup tool]{nslookup tool}
+  
+  (Verwendet wurde das Terminal von einem MacBook Pro mid 2014 mit dem OS El Captian)
+ 
+  \begin{figure}
+  \centering
+    \includegraphics[width=15cm]{nslookup}
+    \label{fig:nslookup}
+  \end{figure}
+
+  \begin{figure}
+  \centering
+    \includegraphics[width=15cm]{wirensany}
+    \label{fig:wirensany}
+  \end{figure}  
+  
+
+  Bei dem Befehl \textbf{nslookup -q = any fh-luebeck.de} erhält man die IP-Adresse \textit{192.168.178.1} für den Server und \textit{fh-luebeck.de mail exchanger = 20 mailin1.fh-luebeck.de. und fh-luebeck.de mail exchanger = 10 mailin2.fh-luebeck.de.} für die Mail Server. 
+  
+  Aufgrund einer Aktualisierung konnte mit dem Befehl \textbf{nslookup -q = any fh-luebeck.de 8.8.8.8 / 8.8.4.4} konnte keine Unterschied weder am Macbook noch an den Laborrechnern festgestellt werden. Aus Neugier wurden Informationen bezüglich des Unterschiedes der beiden Anfragen, von Kommilitonen aus dem höheren Semester nachgefragt. Der offensichtliche Unterschied der beiden Anfragen ist, dass beim zweiten Befehl nicht nur der Hostname-Parameter sondern auch der Server-Parameter eingegeben wurde. 8.8.8.8/8.8.4.4 ist ein öffentlich zugänglicher DNS Server von Google, der auch Informationen über die FH-Lübeck gespeichert hat, welche wir dann über diesen öffentlichen DNS Server bekommen.
+  
+  \begin{figure}
+  \centering
+    \includegraphics[width=15cm]{wirens8888}
+    \label{fig:wirens8888}
+  \end{figure}
+  
+  
+  Hinter der DNS \textit{194.95.248.240} verbirgt sich die Website vom ''Deutschen Forschungsnetz'' (www.dfn.de).
+    \begin{figure}
+  \centering
+    \includegraphics[width=10cm]{dfn}
+    \label{fig:dfn}
+  \end{figure}
+  
+  \begin{figure}
+  \centering
+    \includegraphics[width=15cm]{wiredfn}
+    \label{fig:wiredfn}
+  \end{figure}
+  
+  \subsection[Aufgabe 6 Aufbau von Websiten]{Aufbau von Websiten}
+  
+  Beim Aufruf der beiden Webseiten \emph{\textit{www.fh-luebeck.de}} und \emph{\textit{www.t-online.de}} mit aktivierten AddOns, wurden bei beiden mittels \textit{''IPvFox''} Hosts angezeigt die beim Aufruf der Webseiten als Ressourcen mit geladen wurden. Die Liste der Hosts von t-online.de war um ein dreifaches größer als der von fh-luebeck. 
+  
+  Nach und nach werden weitere Skripte mit \textit{''NoScript''} erlaubt/zugelassen, wobei auf beiden Websiten nun einige Hosts mehr geladen werden. Außerdem haben wir mit \textit{''Ghostery''} beide Websiten auf Tracker (Tracker dienen zur Analyse des Surfverhaltens eines Nutzers) untersucht. Auf t-online wurden vierzehn Tracker gefunden, wobei auf fh-luebeck erstaunlicherweise nur ein Tracker gefunden wurde.
+  
+  \subsection[Aufgabe 7 Laden von Websiten]{Laden von Websiten}
+  
+  Bei erneutem Laden der beiden Website, dieses mal mit gestartetem AddOn \textit{''Firebug''}, konnte festgestellt werden, dass es einige Inhalte oder Bilder gibt die t-online oder die fh-luebeck möglichst schnell bzw als erstes geladen haben möchte. 
+  
+  \begin{figure}
+    \includegraphics[width=15cm]{tonline}
+    \label{fig:tonline}
+  \end{figure}
+  
+  \begin{figure}
+    \includegraphics[width=15cm]{tonlinewin}
+    \caption{T-Online Website des Jahres 2015}
+    \label{fig:tonlinewin}
+  \end{figure}
+  
+  Wie man in der Abbildung \ref{fig:tonlinewin} sehen kann, möchte T-Online natürlich dieses Bild vorher laden als, ein Icon auf der unteren Hälfte der Website.
+  Außerdem fällt auf das nachdem die für t-online ''wichtigen'' Inhalte/Bilder geladen wurden, die Website anfängt Inhalte/Bilder der Werbeagenturen wie (Otto, Bonprix, Ebay, Amazon, etc) zu laden. 
+  
+  Ähnliches Prinzip finden wir bei der Website \emph{\textit{www.fh-luebeck.de}}, hier werden auch erst das Logo und dann die Bilder für die Kategorie \textit{''Aktuelles der Fachhochschule Lübeck''} geladen. Angesichts dieser Fakten kann man davon ausgehen das beide Websiten beim laden Ihrer Inhalte/Bilder Prioriäten setzen, in welcher Reihenfolge was geladen werden soll.
+  
+  \begin{figure}
+  \includegraphics[width=15cm]{fhluebeck}
+  \label{fig:fhluebeck}
+  \end{figure}
+  
+  \subsection[Aufgabe 8 SSL/TLS im Browser]{SSL/TLS im Browser}
+  
+  \textbf{HIER DIE ANTWORT VON SVEN NOCH ABWARTEN WAS ER ZU DEM VERGLEICH DER BILDER SAGT}
+  
+  Mit der Website von \emph{\textit{https://cc.dcsec.uni-hannover.de/}} wurden die Browser Firefox und Safari getestet. 
+  Dabei konnte man eindeutig feststellen
+  Außerdem können wir in die Suchleiste von Firefox \textit{about:config} eingeben und so manuell SSL/TLS Einstellungen vornehmen.
+  
+  \subsection[Aufgabe 9 SSL/TLS beim Server]{SSL/TLS beim Server}
+  
+  Mit Hilfe der SSL Tools wurden die Seiten \emph{\textit{www.signin.ebay.de}} und \emph{\textit{www.banking.haspa.de}} untersucht. Hierbei lieferten beide das Ergebnis ''A-'', welches ein sehr unerwartetes und entäuschendes Ergebnis ist.
+  Man hatte bei beiden Websiten ein Ergebnis von ''A++'' erwartet, da beide eine Möglichkeit für Online Transaktionen sind. Die Protkolle auf solchen Seiten sollten immer aktuell und im Schnitt ''A+'' haben.
+  
+  \begin{figure}
+  \includegraphics[width = 15 cm]{ebay}
+  \label{fig : ebay}
+  \end{figure}
+  
+  \begin{figure}
+  \includegraphics[width=15cm]{bank}
+  \label{fig:bank}
+  \end{figure}
+  
+  \subsection[Aufgabe 10 Auswertung von Cookies]{Auswertung von Cookies}
+  
+  Im Laufe des Praktikums haben sich sehr viele Cookies angesammelt, viele davon sind von Dirttanbiertern die man, wenn man sich davor mit Cookies nie befasst hat, nicht kennt. Es haben sich ca. 80 Cookies angesammelt. 
+  Mit \textit{''Cookie Monster''} kann Einstellungen vornehmen wie einzelne Cookies zu erlauben oder alle/keine Cookies erlauben. Außerdem kann man noch sehen welcher Cookie von welcher Website ist.
+  
+  \subsection[Aufgabe 11 Diskussion AddOns]{Diskussion AddOns}
+  
+  \textbf{Firebug} ist kein gutes AddOn für Netzwerkspezialisten oder Entwickler, aber für einen ''normalen'' Anwender hat dieses AddOn wenig Sinn.\\ 
+  \emph{Fazit:} Wir werden dieses AddOn weiterhin \textbf{nicht benutzen}.
+  
+  \textbf{No Script} ist ein sehr sinnvolles Tool, da es nicht nur Sicherheit mit sich bringt sondern auch noch die Leistung steigert. Da man durch dieses Tool sinnlose Werbungen und Scripte deaktivieren kann, läd die Website viel schneller. Jedoch kommt es ab und zu vor das man eine Website besucht und ein bestimmtes Skript verwenden will welches aber von dem Tool blockiert wird, dies is jedoch kein großes Problem, da man manuell Skripte temporär oder für immer für die Webiste erlauben kann. \\
+  \emph{Fazit:} Da wir vor dem Praktikum schon dieses AddOn kannten und verwendet haben, werden wir es auch in der Zukunft weiterhin \textbf{benutzen}.
+  
+  \textbf{Ghostey} dient zum blockieren der Tracker und man hat immer den Überblick über die Tracker, da sie oben rechts auf dem Bildschirm beim laden der Website angezeigt werden.\\
+  \emph{Fazit:} Wir kannten das AddOn vorher nicht und waren sehr beeindruckt und werden es in der Zukunft \textbf{benutzen}.
+  
+  \textbf{CookieMonster} lässt sich sehr einfach bedienen und man kann leicht Cookies ganz oder einzelnd erlauben und verbieten.\\
+  \emph{Fazit:} Auch dieses AddOn war uns zuvor bekannt und wir werden es weiterhin \textbf{benutzen}.
+  
+  \textbf{DNSSec Validator} prüft ob eine Website mit DNSSec geschützt ist. Man muss einige Einstellungen vornehmen, bevor man dieses AddOn zum laufen bekommt.\\
+  \emph{Fazit:} Da wir keinen sinnvollen Anwendungsfall im Alltag dafür finden, werden wir dieses AddOn \textbf{nicht benutzen}.
+  
+  
+  \subsection[Aufgabe 12 Steganographie]{Steganographie}
+  
+  Im Bild war die Datei ... enthalten und man konnte mit dem bloßen keinen einzigen Unterschied zwischen den beiden Bildern finden.
+  
+  \textbf{SVEN NOCHMAL FRAGEN WELCHE DATEI DA RAUS KAM UND WAS MAN MIT DER HISTOGRAMM FUNKTION GESEHEN HAT}
+       
 %----------------------------------------------------------------------------------------------------------------------------
-
-
   \newpage
 \section[Versuch 4 Switch]{Switch}
+
+
+
 %----------------------------------------------------------------------------------------------------------------------------
-
-
   \newpage
 \section[Versuch 5 Router]{Router}
-%----------------------------------------------------------------------------------------------------------------------------
- 
- 
+
+
+
+%---------------------------------------------------------------------------------------------------------------------------- 
   \newpage
 \section[Versuch 6 Transportschicht]{Transportschicht}
   
