@@ -22,5 +22,11 @@
 \contentsline {subsection}{\numberline {3.7}Aufgabe 11 Diskussion AddOns}{16}{subsection.3.7}
 \contentsline {subsection}{\numberline {3.8}Aufgabe 12 Steganographie}{17}{subsection.3.8}
 \contentsline {section}{\numberline {4}Versuch 4 Switch}{18}{section.4}
-\contentsline {section}{\numberline {5}Versuch 5 Router}{19}{section.5}
-\contentsline {section}{\numberline {6}Versuch 6 Transportschicht}{20}{section.6}
+\contentsline {subsection}{\numberline {4.1}Aufgabe 3 MAC-Adresse}{18}{subsection.4.1}
+\contentsline {subsection}{\numberline {4.2}Aufgabe 4 Beobachtungen im Netz}{19}{subsection.4.2}
+\contentsline {subsection}{\numberline {4.3}Aufgabe 5 Spanning Tree Protocol}{19}{subsection.4.3}
+\contentsline {subsection}{\numberline {4.4}Aufgabe 6 Lernen von Adressen f\IeC {\"u}r die MAC-Adresstabelle}{22}{subsection.4.4}
+\contentsline {subsection}{\numberline {4.5}Aufgabe 7 Erstellen eines VLANs mit der Nummer 100}{24}{subsection.4.5}
+\contentsline {subsection}{\numberline {4.6}Aufgabe 8 VLAN-Trunk-Konfiguration}{24}{subsection.4.6}
+\contentsline {section}{\numberline {5}Versuch 5 Router}{27}{section.5}
+\contentsline {section}{\numberline {6}Versuch 6 Transportschicht}{28}{section.6}

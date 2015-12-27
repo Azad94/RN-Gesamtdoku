@@ -197,8 +197,8 @@ Wenn die Differenz null beträgt, dann ist kein Rahmenverlust aufgetreten.
     \label{fig:wirens8888}
   \end{figure}
   
-  
   Hinter der DNS \textit{194.95.248.240} verbirgt sich die Website vom ''Deutschen Forschungsnetz'' (www.dfn.de).
+  
     \begin{figure}
   \centering
     \includegraphics[width=10cm]{dfn}
@@ -298,6 +298,194 @@ Wenn die Differenz null beträgt, dann ist kein Rahmenverlust aufgetreten.
   \newpage
 \section[Versuch 4 Switch]{Switch}
 
+  \subsection[Aufgabe 3 MAC-Adresse]{MAC-Adresse}
+  
+  Die MAC-Adresse wurde mit dem Befehl \textit{ipconfig/all} unter dem Punkt ''Physikalische Adresse'' gefunden \ref{fig:ipconfigall}. Mittels der Website \\ 
+  \emph{\textit{ http://standards.ieee.org/regauth/oui/index.shtml}} wurde der in Abbildung \ref{fig:macaddr} abgebildete Hersteller gefunden.  
+
+  \begin{figure}
+    \includegraphics[width=10cm]{ipconfigall}
+    \label{fig:ipconfigall}
+  \end{figure}
+     
+  
+  \begin{figure}
+    \includegraphics[width =10cm]{macaddr}
+    \caption{Hersteller}
+    \label{fig:macaddr}
+  \end{figure}
+  
+  \subsection[Aufgabe 4 Beobachtungen im Netz]{Beobachtungen im Netz}
+  
+  \renewcommand{\labelenumi}{\alph{enumi})}
+  \begin{enumerate}
+  \item
+  Die folgenden Befehle wurden auf dem Admin-PC und dem Lab-PC, wie man in der Abbildung sehen kann erfolgreich durchgeführt und mit Wireshark aufgezeichnet.\\
+  \textbf{ectpping - mac destination} (Admin-PC)\\
+  \textbf{ectpping - server} (Lab-PC)
+  
+  \begin{figure}
+    \includegraphics[width=10cm]{ectppingserver}
+    \label{fig:ectppingserver}
+  \end{figure}
+  
+  \item
+  Um nur die Rahmen der Kommunikation von ectpping herauszufinden, kann man nach dem Protokoll ''LOOP'' filtern. In diesem Beispiel wird der Ethernet II Rahmentyp verwendet, welches man anhand der Abbildung \ref{fig:loops} ablesen kann.
+  
+  \begin{figure}
+    \includegraphics[width=10cm]{loops}
+    \label{fig:loops}
+  \end{figure}
+  
+  \item
+  Durch das umstecken der Netzwerkkabel entsteht eine Endschlosschleife. Eine Netzwerküberlastung wird sofort sichtbar, da es keine Regelungen für redundante Pakete gibt. Als Lösung könnte man wie in Versuch 2 schon besprochen Sequenznummern einführen.
+  
+  \item
+ \textbf{KEINE NOTIZEN DAZU  SVEN ODER ANDERE GRUPPE FRAGEN}
+ \end{enumerate}
+ \subsection[Aufgabe 5 Spanning Tree Protocol]{Spanning Tree Protocol}
+ 
+  \renewcommand{\labelenumi}{\alph{enumi})}
+  \begin{enumerate}
+  \item
+  Erst wurde die Nachricht \textit{No spanning tree Instance exists} zurückgegeben. Nachdem das Spanning Tree Protocol mit den gegebenen Befehlen eingeschaltet wurde, wurde eine Tabelle zurückgeliefert, welche alle Schnittstellen mit Informationen über ihre Kosten und andere enthielt. 
+  
+  \begin{figure}
+    \includegraphics[width=10cm]{showspan}
+    \label{fig:showspan}
+  \end{figure}
+  
+  \begin{figure}
+    \includegraphics[width=15cm]{spanningtree}
+    \label{fig:spanningtree}
+  \end{figure}
+  
+  \item
+  Um Schleifzustände zu vermeiden versetzt der STP die Ports, die zusammen den Spanning Tree bilden, in fünf verschiedene Portzustände. Diese Portzustände werden mittels Timer für jeden Portzustand berechnet. In der Tabelle unten sieht man die fünf Zustände die Ports annehmen können. \footnote{www.airnet.de}
+  
+  \begin{table}
+  \begin{tabular}{|l|l}
+      \textbf{Portzustand} & \textbf{Beschreibung} \\ \hline
+		 Disabled     & Administrativer shutdown \\
+		 Listening    & Horchen auf BPDU-Pakete oder versenden von BPDU-Paketen \\
+		 Learning     & Listening-Funktiond und lernen von Quell-MAC-Adressen \\
+		 Forwarding & Listening- und Learning-Funktion und weiterleiten von Datenframes\\
+        Blockeing    & Horchen auf BPDU-Pakete
+    \end{tabular}
+     \caption{Prozesstabelle (BPDU-Pakete sind spezielle Pakete die Switches senden können)}
+    \end{table}
+    
+    Das STP findet redundante Kommunikationswege heraus und ändert die ganze Netzwerktopologie in eine Baumtopologie, die keine Schleifen besitzt. Die Kosten zur Root Bridge sind vier welches man aus der Abbildung \ref{fig:spanningtree} entnehmen kann.
+    
+    \item
+    Das Team, welches das Kabel zum zentralen Switch entfernt, erhält höhere Kosten. Der Grund dafür ist, das dieser sich nun erst über einen anderen Switch verbinden muss um eine Verbindung zum Switch 0 herzustellen.
+    
+    \item
+    \textbf{IST BEI UNS HIER EINE SCHLEIFE ENTSTANDEN ODER KAM HIER DASSELBE RAUS WIE ICH ES SCHON IN AUFGABE 5 b ERWÄHNT HABE ?}
+    
+    \item
+    Typische Informationen vom STP sind:
+    
+    \begin{itemize}
+      \item MAX Age
+      \item Hello Time
+      \item Forward Delay
+    \end{itemize}
+     Wobei die STP-Rahmen folgede Schichten beinhalten: 
+     
+ 	 \textbf{ICH HABE KEINE NOTIZEN ZU DEN RAHMEN (war damit gemeint das mit längen und typ feld ? oder ist damit gemeint welche Tabs angezeigt werden ? das kann man aus den Bildern von Wireshark entnehmen) SONST WIEDER JEMANDEN FRAGEN }
+  \end{enumerate}
+
+   \subsection[Aufgabe 6 Lernen von Adressen für die MAC-Adresstabelle]{Lernen von Adressen für die MAC-Adresstabelle}
+   
+  \renewcommand{\labelenumi}{\alph{enumi})}
+  \begin{enumerate}
+    \item
+    In einem Intervall von 300 s sind erneuerungen der Adressen notwendig, wie man in der Abbildung unten sehen kann.
+    
+    \begin{figure}
+    \includegraphics[width=10cm]{aging}
+    \label{fig:aging}
+    \end{figure}
+  
+  \item
+  Die Einträge waren in sehr kurzer Zeit wieder in der Tabelle eingetragen. Da wir in einem vorhandenem Netzwerk sind und die Switch (wie wir in der Vorlesung gelernt haben) selbstlernend (self-learning) ist, speichert diese Einträge selbstständig in die Tabelle. Die Einträge beinhalten folgende Informationen, die MAC-Adresse, die aktuelle Zeit und die Schnittstelle über die der Rahmen eingetroffen ist.
+  
+  \item
+  Durch den Broadcast an andere unbekannte Ziele, hat die Adresstabell weitere ''DYNAMIC'' Einträge dazu bekommen, weil der Switch diese Adressen schnell dazu gelernt hat.
+  
+  \item
+  Während beim fortlaufenden ectpping der Port abgezogen wurde, kam die Meldung \textit{''Request Timed out''} für ca. 10 s, danach jedoch ging es ''normal'' weiter. Wie schon in den Aufgaben davor besprochen lässt sich dieses Verhalten durch das selbstlernen des Switches erklären. Beim Umstecken der Ports hat Wireshark angezeigt das, dass STP aktiviert wurde.
+  
+  \begin{figure}
+  \includegraphics[width=10cm]{switch}
+  \label{fig:switch}
+  \end{figure}
+  
+  \item
+  Die Quelladresse lässt sich sehr leicht manipulieren ist jedoch zwiespaltig zu beurteilen. Aus Sicht des Senders ist eine gute Möglichkeit sich als jemand anderes auszugeben, doch aus Sicht des Empfängers ist es sehr gefährlich, da wenn als Sicherheitsmaßnahme nur die Gültigkeit der MAC-Adresse überpüft wird, jede Anfrage von einem x beliebigen System angenommen werden könnte. EIn Beispiel dazu wäre wenn Gruppe 1 Ihre Quelladresse auf die von Gruppe 3 ändern würde, würde Gruppe 1 Daten von Gruppe 4 erhalten ohne das diese bemerkt das die Daten an uns gesendet wurden.
+    \end{enumerate}
+    
+  \subsection[Aufgabe 7 Erstellen eines VLANs mit der Nummer 100]{Erstellen eines VLANs mit der Nummer 100.}
+  
+  \renewcommand{\labelenumi}{\alph{enumi})}
+  \begin{enumerate}
+    \item
+    Der Bereich zwischen den Ports 13-18 ist nun unabhängig von den anderen.
+    
+    \begin{figure}
+    \includegraphics[width=15cm]{vlan}
+    \label{fig:vlan}
+    \end{figure}
+    
+    \item
+    Die Kommunikaiton zwischen dem VLAN 100 und dem Default Bereich ist möglich, wenn die Kabelenden an den jeweiligen Bereichen eingesteckt sind.
+    
+    \item
+    Es sind nun weitere Einträge in der Tabelle verzeichnet worden. Das VLAN und der Verbindungspunkt sind in der Tabelle eingetragen, außerdem wird angezeigt das dieser Switch die Root Bridge im VLAN 100 ist. Dieser VLAN hat nun seinen eigenen Spanning-Tree und die Ports von 13-18 sind nun für die anderen nicht mehr erreichbar.
+    
+    \item
+    \textbf{KEINE NOTIZEN DAZU JEMAND ANDEREN FRAGEN ODER SVEN}
+    
+  \end{enumerate}
+    
+  \subsection[Aufgabe 8 VLAN-Trunk-Konfiguration]{VLAN-Trunk-Konfiguration}
+    
+  \renewcommand{\labelenumi}{\alph{enumi})}
+  \begin{enumerate}
+     \item
+     Einstellungen vorgenommen.
+     
+     \begin{figure}
+     \includegraphics[width=10cm]{trunk}
+     \label{fig:trunk}
+     \end{figure}
+     
+     \item
+     Das ''Trunking'' auf dem Interface \textit{gigabitEthernet 0/15} ist aktiviert und erlaubt.
+     
+     \item
+     Die VLAN Tags die gefunden enthielten folgende Informationen:
+     \begin{itemize}
+     \item Priority
+     \item CFI
+     \item ID
+     \item Ethernet Type/Length
+     \end{itemize}
+    
+    \item
+    Die Erreichbarkeit bleibt weiterhin behalten, jedoch haben sich die Portzustände bei einigen anderen Gruppen geändert.
+    
+    \item
+    Um ein VLAN 200 zu konstruieren welches nur die LABPCs aller Teams vertritt, muss man nichts am ''Trunking'' verändern, weil diese automatisch generiert werden.
+   \end{enumerate}
+   
+   
+  
+  
+
+   
+
 
 
 %----------------------------------------------------------------------------------------------------------------------------
@@ -306,8 +494,22 @@ Wenn die Differenz null beträgt, dann ist kein Rahmenverlust aufgetreten.
 
 
 
+
+
+
+
 %---------------------------------------------------------------------------------------------------------------------------- 
   \newpage
 \section[Versuch 6 Transportschicht]{Transportschicht}
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
   
 \end{document}
