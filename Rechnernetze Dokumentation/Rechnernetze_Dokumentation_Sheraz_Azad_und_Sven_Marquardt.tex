@@ -479,20 +479,115 @@ Wenn die Differenz null beträgt, dann ist kein Rahmenverlust aufgetreten.
     \item
     Um ein VLAN 200 zu konstruieren welches nur die LABPCs aller Teams vertritt, muss man nichts am ''Trunking'' verändern, weil diese automatisch generiert werden.
    \end{enumerate}
-   
-   
   
-  
-
-   
-
-
-
 %----------------------------------------------------------------------------------------------------------------------------
   \newpage
 \section[Versuch 5 Router]{Router}
+  
+  \subsection[Aufgabe 2 Traceroute (tracert)]{Traceroute (tracert)}
+  \textbf{ANDERE FRAGEN WAS DIE HIERZU HABEN, ER HATTE UNS IN DER VORLESUNG JA I.WELCHE FRAGEN GESTELLT, DAS WÄRE GUT HIER}
+  
+  \subsection[Aufgabe 4 Erstellen der IP-Adressen für Interfaces und Netze]{Erstellen der IP-Adressen für Interfaces und Netze}
+  
+  \renewcommand{\labelenumi}{\alph{enumi})}
+  \begin{enumerate}
+  \item
+  \textbf{wenn es bild dazu gibt hier einfügen, ansonsten blank}
+  
+  \item
+  \textbf{dito a)}
+  
+  \item
+  \textbf{dito a)}
+  \end{enumerate}
+  
+  \subsection[Aufgabe 5 Konfiguration von DHCP zur dynamischen Adresszuweisung]{Konfiguration von DHCP zur dynamischen Adresszuweisung}
+  
+   \renewcommand{\labelenumi}{\alph{enumi})}
+   \begin{enumerate}
+   \item
+   Die Subnetzmaske ist eine Bitmaske die zusammen mit der IP-Adresse, die Adresse einen Gerätes im Netz festlegt. Ein Subnetzmaske besteht aus 32-Bit und wir meisten in Kombination mit der IP-Adresse verwendet, deshalb ist sie auch genauso lang wie eine IP-Adresse. Die 32-Bit bestehen aus 24-Bit für das Netz und 8-Bit für den Host. Bei uns war diese \textit{255.255.0.0}.
+   
+   Der Standard-Gateway ist unser Router and den unsere Nachricht geschickt wird, falls die IP-Adresse an die wir senden wollen nicht im Subnetz befindet. Der Standard-Gateway überpüft dann ob die IP-Adresse in seinem Subnetz vorhanden ist, falls nicht wird das IP-Paket and die nächste Standard-Gateway geschickt. Dieser Vorgang wiederholt bis jemand das Netz der IP kennt und es dort hinschicken kann.
 
+   \textbf{ÜBERPRÜF MAL OB MEINE ERKLÄRUNG SO PASST}   
 
+   \item
+   Einstellungen vorgenommen. \textbf{UNSERE BEFEHLE AUF DEM BILD HIGHLIGHTEN WENN SVEN SIE SCHICKT}
+   
+   \item
+   \textbf{KEINE AHNUNG muss ich aus den Bildern entnehmen}
+   
+   \item
+   \textbf{FALLS BILD VORHANDEN HIER EINFÜGEN}
+   
+   \item
+   Um per DHCP eine bestimmte IP zuzuweisen, muss der Client vorher den Befehl \textit{''ipconfig/release''} ausführen. Dadurch wird die IP-Adresse für das angegebene Gerät oder das Gerät auf dem dieser Befehl ausgeführt wurde freigegeben. Mit dem Befehl \textit{''ipconfig/renew''} kann der Client nun erneut eine IP-Adresse anfordern.
+   
+   \item
+   Es ist kein Router mit ping erreichbar und folgende Fehlermeldung wird zurückgegeben \textit{''host unreachable''}. Der Grund dafür ist das der Router ein eigenes Subnetz hat und die anderen Router in anderen Subnetzen sind. Somit kann unser Router die anderen Router nicht erreichen.
+   
+   Das ICMP-Protkoll dient zum Austausch von Informations- und Fehlermeldungen über das Internet Protokoll (IP). Dieses kann jedoch die Fehler nicht beheben, sondern nur eine Meldung an weitere Schichten geben. Eine mögliche Meldung könnte sein: \textit{''Echo Request''}.
+   \end{enumerate}
+   
+   \subsection[Augabe 6 Konfiguration von OSPF als Routing-Protokoll]{Konfiguration von OSPF als Routing-Protokoll}
+   
+    \renewcommand{\labelenumi}{\alph{enumi})}
+    \begin{enumerate}
+    \item
+    \textbf{MUSS ICH AUS DEM BILD ENTNEHMEN GEHT SCHNELL}
+    
+    \begin{table}
+  \begin{tabular}{|l|l}
+      \textbf{Protokollname} & \textbf{Vorlesung} \\ \hline
+		 bla  & ja \\
+		 bli  & nein \\
+		 blub  & ja 
+    \end{tabular}
+     \caption{Prozesstabelle (BPDU-Pakete sind spezielle Pakete die Switches senden können)}
+    \end{table}
+    
+    \item
+    \textbf{HIER AUCH WENN BILD REIN DA SONST BLANK}
+    
+    \item
+    Einstellungen vorgenommen.
+    
+    \item
+    Durch das OSPF sind nun alle Router erreichbar und die Pingzeiten haben sich erheblich verbessert, alle sind unter einer Sekunde. 
+    \textbf{AUS DEM BILD KANN ICH EVT MEHR ENTNNEHMEN}
+    
+    \item
+    \textbf{AUS DEM BILD KANN ICH VLT WAS ENTNEHMEN}
+    
+    \item
+    \textbf{AUS DEM BILD KANN ICH VLT WAS ENTNEHMEN, haben sich die Kosten verbessert?}
+    
+    \item
+    \textbf{AUCH IM BILD NACHGUCKEN WELCHE BEFEHLE WIR BENUTZT HABEN}
+    
+    \item
+    \textbf{MEHRERE SICHTWEISEN FRAGE ICH SVEN LIEBER NOCHMAL WAS ER DAZU DENKT }
+
+    \end{enumerate}
+
+  \subsection[Aufgabe 7 Auswirkungen IP-Paketlänge]{Auswirkungen IP-Paketlänge}
+  
+  \textbf{AUS DEM BILD ENTNEHMEN WENN ES EINS GIBT :D}
+  
+  \subsection{Untersuchungen zum Address Resolution Protocoll}
+  
+  \renewcommand{\labelenumi}{\alph{enumi})}
+  \begin{enumerate}
+  \item
+  \textbf{WIEDER AUS DEM BILD ENTNEHMEN HAHA}
+  
+  \item
+  \textbf{AUCH AUS DEM BILD ENTNEHMEN}
+  
+  \item
+  \textbf{WAS SOLL ICH HIERZU DOKUMENTIEREN HANEMANN HAHAHA}
+  \end{enumerate}    
 
 
 

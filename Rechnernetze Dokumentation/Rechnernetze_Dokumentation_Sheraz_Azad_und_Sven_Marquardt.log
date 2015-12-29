@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.12.19)  27 DEC 2015 22:34
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.12.19)  29 DEC 2015 15:26
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -921,7 +921,7 @@ Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 173.
 
 </Users/Sheraz/Documents/Latex/RechnernetzeDokumentation/Gesamtdoku/Bilder/nslo
-okup.png, id=208, 928.46875pt x 441.65pt>
+okup.png, id=229, 928.46875pt x 441.65pt>
 File: /Users/Sheraz/Documents/Latex/RechnernetzeDokumentation/Gesamtdoku/Bilder
 /nslookup.png Graphic file (type png)
 
@@ -937,7 +937,7 @@ Overfull \hbox (28.45271pt too wide) in paragraph at lines 179--181
 
 
 </Users/Sheraz/Documents/Latex/RechnernetzeDokumentation/Gesamtdoku/Bilder/wire
-nsany.png, id=210, 1442.38875pt x 805.0075pt>
+nsany.png, id=231, 1442.38875pt x 805.0075pt>
 File: /Users/Sheraz/Documents/Latex/RechnernetzeDokumentation/Gesamtdoku/Bilder
 /wirensany.png Graphic file (type png)
 
@@ -953,7 +953,7 @@ Overfull \hbox (28.45271pt too wide) in paragraph at lines 185--187
 
 
 </Users/Sheraz/Documents/Latex/RechnernetzeDokumentation/Gesamtdoku/Bilder/wire
-ns8888.png, id=211, 1441.385pt x 800.9925pt>
+ns8888.png, id=232, 1441.385pt x 800.9925pt>
 File: /Users/Sheraz/Documents/Latex/RechnernetzeDokumentation/Gesamtdoku/Bilder
 /wirens8888.png Graphic file (type png)
 
@@ -989,7 +989,7 @@ Package babel Info: Redefining ngerman shorthand "~
 /wirensany.png> </Users/Sheraz/Documents/Latex/RechnernetzeDokumentation/Gesamt
 doku/Bilder/wirens8888.png>]
 </Users/Sheraz/Documents/Latex/RechnernetzeDokumentation/Gesamtdoku/Bilder/dfn.
-png, id=224, 475.7775pt x 136.51pt>
+png, id=245, 475.7775pt x 136.51pt>
 File: /Users/Sheraz/Documents/Latex/RechnernetzeDokumentation/Gesamtdoku/Bilder
 /dfn.png Graphic file (type png)
 
@@ -1000,7 +1000,7 @@ n/Gesamtdoku/Bilder/dfn.png used on input line 204.
 (pdftex.def)             Requested size: 284.52756pt x 81.64pt.
 
 </Users/Sheraz/Documents/Latex/RechnernetzeDokumentation/Gesamtdoku/Bilder/wire
-dfn.png, id=225, 1442.38875pt x 800.9925pt>
+dfn.png, id=246, 1442.38875pt x 800.9925pt>
 File: /Users/Sheraz/Documents/Latex/RechnernetzeDokumentation/Gesamtdoku/Bilder
 /wiredfn.png Graphic file (type png)
 
@@ -1035,7 +1035,7 @@ Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 220.
 
 </Users/Sheraz/Documents/Latex/RechnernetzeDokumentation/Gesamtdoku/Bilder/tonl
-ine.png, id=232, 1436.36626pt x 752.8125pt>
+ine.png, id=253, 1436.36626pt x 752.8125pt>
 File: /Users/Sheraz/Documents/Latex/RechnernetzeDokumentation/Gesamtdoku/Bilder
 /tonline.png Graphic file (type png)
 
@@ -1051,7 +1051,7 @@ Overfull \hbox (28.45271pt too wide) in paragraph at lines 225--227
 
 
 </Users/Sheraz/Documents/Latex/RechnernetzeDokumentation/Gesamtdoku/Bilder/tonl
-inewin.png, id=233, 1129.21875pt x 139.52126pt>
+inewin.png, id=254, 1129.21875pt x 139.52126pt>
 File: /Users/Sheraz/Documents/Latex/RechnernetzeDokumentation/Gesamtdoku/Bilder
 /tonlinewin.png Graphic file (type png)
 
@@ -1077,7 +1077,7 @@ Package babel Info: Redefining ngerman shorthand "~
 tonline.png> </Users/Sheraz/Documents/Latex/RechnernetzeDokumentation/Gesamtdok
 u/Bilder/tonlinewin.png>]
 </Users/Sheraz/Documents/Latex/RechnernetzeDokumentation/Gesamtdoku/Bilder/fhlu
-ebeck.png, id=243, 1440.38126pt x 693.59125pt>
+ebeck.png, id=264, 1440.38126pt x 693.59125pt>
 File: /Users/Sheraz/Documents/Latex/RechnernetzeDokumentation/Gesamtdoku/Bilder
 /fhluebeck.png Graphic file (type png)
 
@@ -1115,7 +1115,7 @@ Package babel Info: Redefining ngerman shorthand "~
 [14 </Users/Sheraz/Documents/Latex/RechnernetzeDokumentation/Gesamtdoku/Bilder/
 fhluebeck.png>]
 </Users/Sheraz/Documents/Latex/RechnernetzeDokumentation/Gesamtdoku/Bilder/ebay
-.png, id=249, 882.29625pt x 479.7925pt>
+.png, id=270, 882.29625pt x 479.7925pt>
 File: /Users/Sheraz/Documents/Latex/RechnernetzeDokumentation/Gesamtdoku/Bilder
 /ebay.png Graphic file (type png)
 
@@ -1131,7 +1131,7 @@ Overfull \hbox (28.45271pt too wide) in paragraph at lines 259--261
 
 
 </Users/Sheraz/Documents/Latex/RechnernetzeDokumentation/Gesamtdoku/Bilder/bank
-.png, id=250, 909.3975pt x 497.86pt>
+.png, id=271, 909.3975pt x 497.86pt>
 File: /Users/Sheraz/Documents/Latex/RechnernetzeDokumentation/Gesamtdoku/Bilder
 /bank.png Graphic file (type png)
 
@@ -1196,7 +1196,7 @@ Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 301.
 
 </Users/Sheraz/Documents/Latex/RechnernetzeDokumentation/Gesamtdoku/Bilder/ipco
-nfigall.png, id=267, 553.06625pt x 742.775pt>
+nfigall.png, id=288, 553.06625pt x 742.775pt>
 File: /Users/Sheraz/Documents/Latex/RechnernetzeDokumentation/Gesamtdoku/Bilder
 /ipconfigall.png Graphic file (type png)
 
@@ -1207,7 +1207,7 @@ n/Gesamtdoku/Bilder/ipconfigall.png used on input line 307.
 (pdftex.def)             Requested size: 284.52756pt x 382.1197pt.
 
 </Users/Sheraz/Documents/Latex/RechnernetzeDokumentation/Gesamtdoku/Bilder/maca
-ddr.png, id=268, 777.90625pt x 73.27374pt>
+ddr.png, id=289, 777.90625pt x 73.27374pt>
 File: /Users/Sheraz/Documents/Latex/RechnernetzeDokumentation/Gesamtdoku/Bilder
 /macaddr.png Graphic file (type png)
 
@@ -1231,7 +1231,7 @@ Package babel Info: Redefining ngerman shorthand "~
  [18 </Users/Sheraz/Documents/Latex/RechnernetzeDokumentation/Gesamtdoku/Bilder
 /ipconfigall.png>]
 </Users/Sheraz/Documents/Latex/RechnernetzeDokumentation/Gesamtdoku/Bilder/ectp
-pingserver.png, id=275, 553.06625pt x 164.615pt>
+pingserver.png, id=296, 553.06625pt x 164.615pt>
 File: /Users/Sheraz/Documents/Latex/RechnernetzeDokumentation/Gesamtdoku/Bilder
 /ectppingserver.png Graphic file (type png)
 
@@ -1242,7 +1242,7 @@ n/Gesamtdoku/Bilder/ectppingserver.png used on input line 328.
 (pdftex.def)             Requested size: 284.52756pt x 84.68599pt.
 
 </Users/Sheraz/Documents/Latex/RechnernetzeDokumentation/Gesamtdoku/Bilder/loop
-s.png, id=277, 642.14906pt x 557.08125pt>
+s.png, id=298, 642.14906pt x 557.08125pt>
 File: /Users/Sheraz/Documents/Latex/RechnernetzeDokumentation/Gesamtdoku/Bilder
 /loops.png Graphic file (type png)
 
@@ -1267,7 +1267,7 @@ Package babel Info: Redefining ngerman shorthand "~
 /macaddr.png> </Users/Sheraz/Documents/Latex/RechnernetzeDokumentation/Gesamtdo
 ku/Bilder/ectppingserver.png>]
 </Users/Sheraz/Documents/Latex/RechnernetzeDokumentation/Gesamtdoku/Bilder/show
-span.png, id=290, 318.18875pt x 55.20625pt>
+span.png, id=312, 318.18875pt x 55.20625pt>
 File: /Users/Sheraz/Documents/Latex/RechnernetzeDokumentation/Gesamtdoku/Bilder
 /showspan.png Graphic file (type png)
 
@@ -1278,7 +1278,7 @@ n/Gesamtdoku/Bilder/showspan.png used on input line 354.
 (pdftex.def)             Requested size: 284.52756pt x 49.36589pt.
 
 </Users/Sheraz/Documents/Latex/RechnernetzeDokumentation/Gesamtdoku/Bilder/span
-ningtree.png, id=291, 811.03pt x 453.695pt>
+ningtree.png, id=313, 811.03pt x 453.695pt>
 File: /Users/Sheraz/Documents/Latex/RechnernetzeDokumentation/Gesamtdoku/Bilder
 /spanningtree.png Graphic file (type png)
 
@@ -1336,7 +1336,7 @@ Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 399.
 
 </Users/Sheraz/Documents/Latex/RechnernetzeDokumentation/Gesamtdoku/Bilder/agin
-g.png, id=313, 316.18124pt x 60.225pt>
+g.png, id=334, 316.18124pt x 60.225pt>
 File: /Users/Sheraz/Documents/Latex/RechnernetzeDokumentation/Gesamtdoku/Bilder
 /aging.png Graphic file (type png)
 
@@ -1356,7 +1356,7 @@ Package babel Info: Redefining ngerman shorthand "~
  [22 </Users/Sheraz/Documents/Latex/RechnernetzeDokumentation/Gesamtdoku/Bilder
 /aging.png>]
 </Users/Sheraz/Documents/Latex/RechnernetzeDokumentation/Gesamtdoku/Bilder/swit
-ch.jpg, id=324, 1264.725pt x 711.4078pt>
+ch.jpg, id=345, 1264.725pt x 711.4078pt>
 File: /Users/Sheraz/Documents/Latex/RechnernetzeDokumentation/Gesamtdoku/Bilder
 /switch.jpg Graphic file (type jpg)
 
@@ -1371,7 +1371,7 @@ Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 429.
 
 </Users/Sheraz/Documents/Latex/RechnernetzeDokumentation/Gesamtdoku/Bilder/vlan
-.png, id=325, 572.1375pt x 665.48625pt>
+.png, id=346, 572.1375pt x 665.48625pt>
 File: /Users/Sheraz/Documents/Latex/RechnernetzeDokumentation/Gesamtdoku/Bilder
 /vlan.png Graphic file (type png)
 
@@ -1405,7 +1405,7 @@ Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 452.
 
 </Users/Sheraz/Documents/Latex/RechnernetzeDokumentation/Gesamtdoku/Bilder/trun
-k.png, id=333, 628.3475pt x 567.11874pt>
+k.png, id=354, 628.3475pt x 567.11874pt>
 File: /Users/Sheraz/Documents/Latex/RechnernetzeDokumentation/Gesamtdoku/Bilder
 /trunk.png Graphic file (type png)
 
@@ -1434,56 +1434,120 @@ Package babel Info: Redefining ngerman shorthand "~
  [25 </Users/Sheraz/Documents/Latex/RechnernetzeDokumentation/Gesamtdoku/Bilder
 /vlan.png>]
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 492.
+(babel)             in language  on input line 484.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 492.
+(babel)             in language  on input line 484.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 492.
+(babel)             in language  on input line 484.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 492.
+(babel)             in language  on input line 484.
  [26 </Users/Sheraz/Documents/Latex/RechnernetzeDokumentation/Gesamtdoku/Bilder
 /trunk.png>]
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 493.
+(babel)             in language  on input line 485.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 493.
+(babel)             in language  on input line 485.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 502.
+(babel)             in language  on input line 487.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 502.
+(babel)             in language  on input line 487.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 502.
+(babel)             in language  on input line 490.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 502.
- [27]
+(babel)             in language  on input line 490.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 503.
+(babel)             in language  on input line 504.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 503.
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 515.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 515.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 515.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 515.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 515.
- [28]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 515.
+(babel)             in language  on input line 504.
 
-(./Rechnernetze_Dokumentation_Sheraz_Azad_und_Sven_Marquardt.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 515.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 515.
-Package rerunfilecheck Info: File `Rechnernetze_Dokumentation_Sheraz_Azad_und_S
-ven_Marquardt.out' has not changed.
-(rerunfilecheck)             Checksum: 41C8AC302C14211FA314520B622B402B;2570.
+Overfull \hbox (3.42978pt too wide) in paragraph at lines 516--517
+[]\T1/lmr/m/n/12 Einstellungen vor-ge-nom-men. \T1/lmr/bx/n/12 UN-SE-RE BE-FEH-
+LE AUF DEM BILD
+ []
+
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 517.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 517.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 517.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 517.
+[27]
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 533.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 533.
+
+Overfull \hbox (0.18747pt too wide) in paragraph at lines 538--539
+[]\T1/lmr/bx/n/12 MUSS ICH AUS DEM BILD ENT-NEH-MEN GEHT SCHNELL 
+ []
+
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 557.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 557.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 557.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 557.
+[28]
+Overfull \hbox (20.39897pt too wide) in paragraph at lines 570--571
+[]\T1/lmr/bx/n/12 MEHRERE SICHT-WEI-SEN FRA-GE ICH SVEN LIE-BER NOCH-
+ []
+
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 574.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 574.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 578.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 578.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 597.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 597.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 597.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 597.
+[29]
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 598.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 598.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 610.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 610.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 610.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 610.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 610.
+ [30]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 610.
+ (./Rechnernetze_Dokumentation_Sheraz_Azad_und_Sven_Marquardt.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 610.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 610.
+
+
+Package rerunfilecheck Warning: File `Rechnernetze_Dokumentation_Sheraz_Azad_un
+d_Sven_Marquardt.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `Rechnernetze_Dokumentation_Sheraz_A
+zad_und_Sven_Marquardt.out':
+(rerunfilecheck)             Before: F51D26E332FA1AD7595A0619BB40A0D3;2982
+(rerunfilecheck)             After:  36838E045CD7FB9D79D735A20D9EB62F;3168.
  ) 
 Here is how much of TeX's memory you used:
- 9861 strings out of 493089
- 153042 string characters out of 6134841
+ 9894 strings out of 493089
+ 153351 string characters out of 6134841
  309405 words of memory out of 5000000
- 13078 multiletter control sequences out of 15000+600000
+ 13082 multiletter control sequences out of 15000+600000
  67118 words of font info for 52 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  41i,8n,52p,902b,568s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1498,10 +1562,10 @@ l/texlive/2015/texmf-dist/fonts/type1/public/lm/lmri12.pfb></usr/local/texlive/
 2015/texmf-dist/fonts/type1/public/lm/lmssbx10.pfb></usr/local/texlive/2015/tex
 mf-dist/fonts/type1/public/lm/lmsy10.pfb>
 Output written on Rechnernetze_Dokumentation_Sheraz_Azad_und_Sven_Marquardt.pdf
- (28 pages, 8008280 bytes).
+ (30 pages, 8014529 bytes).
 PDF statistics:
- 421 PDF objects out of 1000 (max. 8388607)
- 339 compressed objects within 4 object streams
- 93 named destinations out of 1000 (max. 500000)
- 349 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 479 PDF objects out of 1000 (max. 8388607)
+ 395 compressed objects within 4 object streams
+ 122 named destinations out of 1000 (max. 500000)
+ 381 words of extra memory for PDF output out of 10000 (max. 10000000)
 
