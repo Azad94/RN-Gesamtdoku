@@ -1,0 +1,38 @@
+\select@language {ngerman}
+\contentsline {section}{\numberline {1}Versuch 1 Schichtenmodell}{3}{section.1}
+\contentsline {subsection}{\numberline {1.1}Aufgabe 2 \IeC {\"U}berlegungen f\IeC {\"u}r das Spiel Vier gewinnt}{3}{subsection.1.1}
+\contentsline {subsection}{\numberline {1.2}Aufgabe 4 Vor- und Nachteile der Realisierung}{4}{subsection.1.2}
+\contentsline {subsection}{\numberline {1.3}Aufgabe 5 Verbesserte Kommunikation durch Stifte}{5}{subsection.1.3}
+\contentsline {subsection}{\numberline {1.4}Aufgabe 6 Kommunikation durch Klatschen}{6}{subsection.1.4}
+\contentsline {subsection}{\numberline {1.5}Aufgabe 7 Kommunikation mit beliebigen Teilnnehmern}{7}{subsection.1.5}
+\contentsline {subsection}{\numberline {1.6}Aufgabe 8 Kommunikation mit bestimmten Teilnehmern}{7}{subsection.1.6}
+\contentsline {subsection}{\numberline {1.7}Aufgabe 9 Datenfluss Problem}{7}{subsection.1.7}
+\contentsline {section}{\numberline {2}Versuch 2 Zuverl\IeC {\"a}ssige Daten\IeC {\"u}bertragung}{9}{section.2}
+\contentsline {subsection}{\numberline {2.1}Aufgabe 2 Messung der H\IeC {\"a}ufigkeit von Rahmenverlusten}{9}{subsection.2.1}
+\contentsline {subsection}{\numberline {2.2}Aufgabe 3 Messung der Bitfehlerrate}{9}{subsection.2.2}
+\contentsline {subsection}{\numberline {2.3}Aufgabe 4 Vor\IeC {\"u}berlegungen zum sicheren Protokoll}{9}{subsection.2.3}
+\contentsline {subsection}{\numberline {2.4}Aufgabe 6 Verhinderung von Rahmenverlusten}{10}{subsection.2.4}
+\contentsline {section}{\numberline {3}Versuch 3 Anwendungsschicht und Tools}{11}{section.3}
+\contentsline {subsection}{\numberline {3.1}Aufgabe 4 nslookup tool}{11}{subsection.3.1}
+\contentsline {subsection}{\numberline {3.2}Aufgabe 6 Aufbau von Websiten}{13}{subsection.3.2}
+\contentsline {subsection}{\numberline {3.3}Aufgabe 7 Laden von Websiten}{14}{subsection.3.3}
+\contentsline {subsection}{\numberline {3.4}Aufgabe 8 SSL/TLS im Browser}{15}{subsection.3.4}
+\contentsline {subsection}{\numberline {3.5}Aufgabe 9 SSL/TLS beim Server}{16}{subsection.3.5}
+\contentsline {subsection}{\numberline {3.6}Aufgabe 10 Auswertung von Cookies}{17}{subsection.3.6}
+\contentsline {subsection}{\numberline {3.7}Aufgabe 11 Diskussion AddOns}{17}{subsection.3.7}
+\contentsline {subsection}{\numberline {3.8}Aufgabe 12 Steganographie}{18}{subsection.3.8}
+\contentsline {section}{\numberline {4}Versuch 4 Switch}{19}{section.4}
+\contentsline {subsection}{\numberline {4.1}Aufgabe 3 MAC-Adresse}{19}{subsection.4.1}
+\contentsline {subsection}{\numberline {4.2}Aufgabe 4 Beobachtungen im Netz}{20}{subsection.4.2}
+\contentsline {subsection}{\numberline {4.3}Aufgabe 5 Spanning Tree Protocol}{21}{subsection.4.3}
+\contentsline {subsection}{\numberline {4.4}Aufgabe 6 Lernen von Adressen f\IeC {\"u}r die MAC-Adresstabelle}{23}{subsection.4.4}
+\contentsline {subsection}{\numberline {4.5}Aufgabe 7 Erstellen eines VLANs mit der Nummer 100}{24}{subsection.4.5}
+\contentsline {subsection}{\numberline {4.6}Aufgabe 8 VLAN-Trunk-Konfiguration}{26}{subsection.4.6}
+\contentsline {section}{\numberline {5}Versuch 5 Router}{28}{section.5}
+\contentsline {subsection}{\numberline {5.1}Aufgabe 2 Traceroute (tracert)}{28}{subsection.5.1}
+\contentsline {subsection}{\numberline {5.2}Aufgabe 4 Erstellen der IP-Adressen f\IeC {\"u}r Interfaces und Netze}{28}{subsection.5.2}
+\contentsline {subsection}{\numberline {5.3}Aufgabe 5 Konfiguration von DHCP zur dynamischen Adresszuweisung}{28}{subsection.5.3}
+\contentsline {subsection}{\numberline {5.4}Augabe 6 Konfiguration von OSPF als Routing-Protokoll}{29}{subsection.5.4}
+\contentsline {subsection}{\numberline {5.5}Aufgabe 7 Auswirkungen IP-Paketl\IeC {\"a}nge}{32}{subsection.5.5}
+\contentsline {subsection}{\numberline {5.6}Aufgabe 8 Untersuchungen zum Adress Resolution Protocol}{33}{subsection.5.6}
+\contentsline {section}{\numberline {6}Versuch 6 Transportschicht}{35}{section.6}
