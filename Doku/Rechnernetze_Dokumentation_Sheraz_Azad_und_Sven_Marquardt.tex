@@ -178,11 +178,19 @@ Wenn die Differenz null beträgt, dann ist kein Rahmenverlust aufgetreten.
   
   \subsection[Aufgabe 6 Verhinderung von Rahmenverlusten]{Verhinderung von Rahmenverlusten}
   
-  \textbf{HIER\\
-  FEHLT SVEN \\
-  SEIN PART\\
-  :D}
+ Die Lösung zu dieser Aufgabe sind unter der ZIP-Datei \textit{"bla"} zu finden.
+ 
+ \subsection[Aufgabe 7 Bitfehlerkorrektur (rückwärts)]{Bitfehlerkorrektur (rückwärts)}
 
+   Die Lösung zu dieser Aufgabe sind unter der ZIP-Datei \textit{"bla"} zu finden.
+   
+   \subsection[Aufgabe 8 Bitfehlerkorrektur (vorwärts)]{Bitfehlerkorrektxur (vorwärts)}
+   
+    Die Lösung zu dieser Aufgabe sind unter der ZIP-Datei \textit{"bla"} zu finden.
+    
+    \subsection[Aufgabe 9 Messung der Round-Trip-Time]{Messung der Round-Trip-Time}
+    
+     Die Lösung zu dieser Aufgabe sind unter der ZIP-Datei \textit{"bla"} zu finden.
 %----------------------------------------------------------------------------------------------------------------------------  
   \newpage
 \section[Versuch 3 Anwendungsschicht und Tools]{Anwendungsschicht und Tools}
@@ -282,9 +290,7 @@ Wenn die Differenz null beträgt, dann ist kein Rahmenverlust aufgetreten.
   
   \subsection[Aufgabe 12 Steganographie]{Steganographie}
   
-  Im Bild war die Datei vom aktuellen Versuch 3 enthalten und man konnte mit dem bloßen keinen einzigen Unterschied zwischen den beiden Bildern finden, jedoch konnte man einen klaren Unterschied in den Farben im Histogramm sehen.
-  
-  \textbf{HIER MALTE GEFRAGT WEGEN BILD}
+  Im Bild war die Datei vom aktuellen Versuch 3 enthalten und man konnte mit dem bloßen Auge keinen einzigen Unterschied zwischen den beiden Bildern finden, jedoch konnte man einen klaren Unterschied in den Farben im Histogramm sehen.
        
 %----------------------------------------------------------------------------------------------------------------------------
   \newpage
@@ -321,12 +327,14 @@ Wenn die Differenz null beträgt, dann ist kein Rahmenverlust aufgetreten.
   
     \includegraphics[width=10cm]{loops}
     \label{fig:loops}
-  
+  \newline
   \item
   Durch das umstecken der Netzwerkkabel entsteht eine Endschlosschleife. Eine Netzwerküberlastung wird sofort sichtbar, da es keine Regelungen für redundante Pakete gibt. Als Lösung könnte man wie in Versuch 2 schon besprochen Sequenznummern einführen.
   
   \item
- \textbf{KEINE NOTIZEN DAZU  SVEN ODER ANDERE GRUPPE FRAGEN}
+  
+  Wenn man die beiden Switchen miteinander verbindet ensteht eine Loop, da diese auch noch zusätzlich über den Switch 0 miteinander verbunden sind. Wird die Verbindung zum Switch 0 getrennt, erweist sich das als kein Problem.
+ 
  \end{enumerate}
  
  \subsection[Aufgabe 5 Spanning Tree Protocol]{Spanning Tree Protocol}
@@ -363,24 +371,38 @@ Wenn die Differenz null beträgt, dann ist kein Rahmenverlust aufgetreten.
     Das Team, welches das Kabel zum zentralen Switch entfernt, erhält höhere Kosten. Der Grund dafür ist, das dieser sich nun erst über einen anderen Switch verbinden muss um eine Verbindung zum Switch 0 herzustellen.
     
     \item
-    Zuerst flackerten die Leuchten beider Prots durchgehend und nach ca. 10 - 15 Sekunden wurde dann ein Port gesperrt und somit hörte auch das leuchten auf.
-    
-    \textbf{WARS DAS ? ODER FEHLT DA NOCH WAS? ABSPRACHE MIT ANDEREN}
+    Wird Port 9 und 10 verbunden wird davon ausgegangen das eine Loop entsteht und das Spanning Tree Protokoll aktiv ist, sollte einer der beiden Ports gesperrt werden. Die Überlegungen wurden beim ausprobieren bestätigt.
+    Zuerst flackerten die Leuchten beider Prots durchgehend und nach ca. 10 - 15 Sekunden wurde ein Port gesperrt und somit hörte auch das leuchten bei diesem auf.
    
+   \newpage
     \item
     Typische Informationen vom STP sind:
-    
+   
     \begin{itemize}
       \item MAX Age
       \item Hello Time
       \item Forward Delay
     \end{itemize}
+    
      Wobei die STP-Rahmen folgede Schichten beinhalten: 
      
- 	 \textbf{WEIß ICH WAS ABER LIEBER NOCHMAL FRAGEN ANDERE GRUPPE }
-  \end{enumerate}
+     \begin{itemize}
+     \item Schicht 2 Sicherungsschicht (Data Link Layer)
+     \item Unterschicht 2a LLC (Logical Link Control)
+     \item Unterschicht 2b MAC (Media Access Control)
+     \end{itemize}
   
-
+  \begin{table}[htbp]
+  \begin{tabular}{|l|l}
+      \textbf{Rahmenaufbau von LOOP} & \textbf{Rahmenaufbau von STP} \\ \hline
+		 Frame     & Frame \\
+		 Ethernet    & Ethernet \\
+		 Configuration Test Protocol & Logical Link Control \\
+		 Data & Spanning Tree Protocol\\
+    \end{tabular}
+    \end{table}
+       \end{enumerate}
+       
    \subsection[Aufgabe 6 Lernen von Adressen für die MAC-Adresstabelle]{Lernen von Adressen für die MAC-Adresstabelle}
    
   \renewcommand{\labelenumi}{\alph{enumi})}
@@ -424,8 +446,7 @@ Wenn die Differenz null beträgt, dann ist kein Rahmenverlust aufgetreten.
     Es sind nun weitere Einträge in der Tabelle verzeichnet worden. Das VLAN und der Verbindungspunkt sind in der Tabelle eingetragen, außerdem wird angezeigt das dieser Switch die Root Bridge im VLAN 100 ist. Dieser VLAN hat nun seinen eigenen Spanning-Tree und die Ports von 13-18 sind nun für die anderen nicht mehr erreichbar.
     
     \item
-    \textbf{KEINE NOTIZEN DAZU JEMAND ANDEREN FRAGEN ODER SVEN}
-    
+    Durch das umstecken des AdminPCs in die Ports des VLANs sind nun nur noc Geräte aus dem VLAN 100 zu erreichen.
   \end{enumerate}
     
   \subsection[Aufgabe 8 VLAN-Trunk-Konfiguration]{VLAN-Trunk-Konfiguration}
@@ -462,8 +483,50 @@ Wenn die Differenz null beträgt, dann ist kein Rahmenverlust aufgetreten.
 \section[Versuch 5 Router]{Router}
   
   \subsection[Aufgabe 2 Traceroute (tracert)]{Traceroute (tracert)}
-  \textbf{ANDERE FRAGEN WAS DIE HIERZU HABEN, ER HATTE UNS IN DER VORLESUNG JA I.WELCHE FRAGEN GESTELLT, DAS WÄRE GUT HIER}
+  Berechnungen die vor der Ausfphrung von traceroute sind folgende.
   
+  2/3 der Lichtgeschwindigkeit = Ausbreitungsgeschwindigkeit\\
+  2/3 * 300.000.000 Meter pro Sekunde = 200.000.000 Meter pro Sekunde\\
+  Die Ausbreitungsgeschwindigkeit beträgt somit 200.000.000 Meter pro Sekunde.
+  
+  100 km Leitungslänge / Ausbreitungsgeschwindigkeit = Einwegverzögerung\\
+  100.000 Meter / 200.000.000 Meter/s = 0,0005 Sekunden $\rightarrow$ 0,5 Millisekunden\\
+  Die Einwegsverzögerung beträgt somit 0,5 Millisekunden.
+  
+  (Hinweis die Berechnung mit der Luftlinie beinhaltet nur den Hinweg, wobei traceroute den Hin- und Rückweg berücksichtigt.)
+  
+  Die Luftlinie zwischen Hamburg und Australien beträgt 14.449,41 km, wie man aus der Abbildung auch entnehmen kann.\\
+  14.449.410 Meter / 200.000.000 Meter/s = 0,07224705 s $\rightarrow$ 72,24705 Millisekunden
+  
+   \begin{figure}[htbp]
+   \centering
+   \includegraphics[width=9cm]{hamburg}
+   \label{fig:hamburg}
+   \end{figure}
+
+ \newpage
+   Die Luftlinie zwischen Lübeck und Australien beträgt 14.397,71 km, wie man aus der Abbildung auch entnehmen kann.\\
+  14.397.701 Meter / 200.000.000 Meter/s = 0,07198855 s $\rightarrow$ 71,98855 Millisekunden
+  
+ \begin{figure}[htbp]
+   \centering
+   \includegraphics[width=9cm]{luebeck}
+   \label{fig:luebeck}\\
+   \end{figure}
+   
+     \begin{table}[htbp]
+  \begin{tabular}{|l|ll}
+      \textbf{Zieladresse} & \textbf{Hamburg} & \textbf{Lübeck}\\ \hline
+		 www.fh-luebeck.de & 51 ms & 1 ms \\
+		 www.luebeck.de & 41 ms & 33 ms\\
+		 www.aarnet.edu.au & 348 ms & 345 ms\\
+    \end{tabular}
+    \end{table}
+    
+    Mittels traceroute wurde festgestellt das dieIP-Pakete für die Adressen www.fh-luebeck.de und www.luebeck.de nicht nur innerhalb Lübecks weitergeleitet werden. Die IP-Pakete werden über Hamburg, Berlind und letzendlich nach Frankfurt geleitet und wieder zurück. Der Grund dafür ist, dass Frankfurt in Frankfurt ein Knotenpunkt des Internets lokalisiert ist, wo viele Netzt zusammengeführt werden.
+    Der Grund für die (relativ) lange Anfrage nach Australien liegt tatsächlich an der weiten Entfernung.
+    
+    \newpage
   \subsection[Aufgabe 4 Erstellen der IP-Adressen für Interfaces und Netze]{Erstellen der IP-Adressen für Interfaces und Netze}
   
   \renewcommand{\labelenumi}{\alph{enumi})}
@@ -488,18 +551,38 @@ Wenn die Differenz null beträgt, dann ist kein Rahmenverlust aufgetreten.
    Der Standard-Gateway ist unser Router and den unsere Nachricht geschickt wird, falls die IP-Adresse an die gesendet werden soll sich nicht im Subnetz befindet. Der Standard-Gateway überpüft dann ob die IP-Adresse in seinem Subnetz vorhanden ist, falls nicht wird das IP-Paket and die nächste Standard-Gateway geschickt. Dieser Vorgang wiederholt bis jemand das Netz der IP kennt und es dort hinschicken kann.
 
    \item
-   Es gab keine Probleme beim ausführen der Befehle. 
-   \textbf{SVEN WIR HABEN HIERZU KEIN BILD, DESWEGEN WEIß ICH NCIHT WELCHE BEFEHLE WIR GEWÄHLT HABEN}
-   
-   \item
-   \textbf{HABE KEIN BILD DAZU GEFUNDEN WAS DU GESCHICKT HAST UND AUCH NICHTS VON WIRESHARK (was haben wir eig im Praktikum gemacht frage ich mich)}
-   
-   \item
-   \textbf{HIERZU GIBT ES AUCH KEIN BILD WOHER SOLL ICH WISSEN WAS DA RAUS KAM :P (ich weiß was wir im praktikum gemacht haben .... nichts :D)}
-   
+   Um den Router als DHCP-Server fungieren zu lassen, wurden folgende Schritte durchgeführt:
+	 \begin{itemize}
+     \item mittels \textit{ip dhcp excluded-adress 172.16.101.1} wird die IP-Adresse ausgeschlossen 
+     \item \textit{ip dhcp pool mypool} dient zum anlegen des Pools
+     \item anschließend wird mit \textit{network 172.16.101.0 255.255.255.0} der Bereich für die IP-Adressen und der Netzmaske festgelegt.
+     \item festlegen des DNS-Server und des Default-Router erfolgt durch \textit{dns-server 172.16.0.100} und \textit{default-router 172.16.101.1}
+     \item am Ende wird die Gültigkeit der IP-Adressen mit dem Befehl \textit{lease 1} auf 24 Stunden festgelegt
+     \end{itemize}
+	
    \item
    Um per DHCP eine bestimmte IP zuzuweisen, muss der Client vorher den Befehl \textit{''ipconfig/release''} ausführen. Dadurch wird die IP-Adresse für das angegebene Gerät oder das Gerät auf dem dieser Befehl ausgeführt wurde freigegeben. Mit dem Befehl \textit{''ipconfig/renew''} kann der Client nun erneut eine IP-Adresse anfordern.
+Bei der Beobachtung mittels Wireshark wurde folgender Ablauf festgestellt:
+\begin{itemize}
+\item DHCP-Discover: Client (noch ohne IP-Adresse) schickt eine Broadcastanfrage an den lokalen DHCP-Server
+\item DHCP-Offer: DHCP-Server bietet dem Client eine IP-Adresse an
+\item DHCP-Request: Client fordert die angebotene IP-Adresse an
+\item DHCP-Ack: DHCP-Server bestätigt angeforderte IP-Adresse
+\end{itemize}
    
+   \item
+   Die vergebene IP-Adresse liegt nun im dem in Aufgabe 5b) erstellen Pool.
+
+	\item
+	Der AdminPC hat die in der Laborbeschreibung beschriebene IP-Adresse nicht enthalten. Dementsprechend muss man die ipconfig löschen \textit{ipconfig/release}damit diese alle IP-Adressen neu lernen muss, um dann mittels \textit{ipconfig/renew} die neue IP-Adresse einzustellen. Folgende Befehle wurden ausgeführt für den Vorgang ausgeführt.
+	\begin{itemize}
+	\item ip dhcp pool mypool2
+	\item dns-server 172.16.100.100
+	\item default-router 172.16.101.1
+	\item lease 1
+	\item client-identifier 00:14:0b:61:61:d2
+	\end{itemize}
+
    \item
    Es ist kein Router mit ping erreichbar und folgende Fehlermeldung wird zurückgegeben \textit{''host unreachable''}. Der Grund dafür ist das der Router ein eigenes Subnetz hat und die anderen Router in anderen Subnetzen sind. Somit kann unser Router die anderen Router nicht erreichen.
    
@@ -516,15 +599,17 @@ Wenn die Differenz null beträgt, dann ist kein Rahmenverlust aufgetreten.
    \subsection[Augabe 6 Konfiguration von OSPF als Routing-Protokoll]{Konfiguration von OSPF als Routing-Protokoll}
    
     \renewcommand{\labelenumi}{\alph{enumi})}
-    \begin{enumerate}
-    \item
-    \begin{figure}[htbp]
-    \centering
-    \includegraphics[width=10cm]{protokolle}
-    \label{fig:protokolle}
-    \end{figure}
+    \begin{enumerate} 
+    \item 
+	Folgende Protokolle wurden angezeigt und sind aus der Vorlesung bekannt bzw. nicht bekannt.   
+   \begin{figure}[htbp]
+   \centering
+   \includegraphics[width=8cm]{protokolle}
+   \label{fig:protokolle}
+   \end{figure}
     
-   \begin{table}[htbp]
+     \begin{table}[htbp]
+   \centering
   \begin{tabular}{|l|l}
       \textbf{Protokollname} & \textbf{Vorlesung} \\ \hline
 		 bgp = Border Gateway Protocol  & ja \\
@@ -537,11 +622,11 @@ Wenn die Differenz null beträgt, dann ist kein Rahmenverlust aufgetreten.
 		 rip = Routing Information Protocol & ja
     \end{tabular}
    \end{table}
-    
+        
     \item
     Es gab keine Probleme beim ausführen der Befehle und der Befehl \textit{show interface} hat gezeigt das, dass Interface aktviert wurde wie man in der Abbildung \ref{fig:est} sehen kann.
     
-   \includegraphics[width=10cm]{est}
+   \includegraphics[width=13cm]{est}
    \label{fig:est}
 
     
@@ -550,23 +635,21 @@ Wenn die Differenz null beträgt, dann ist kein Rahmenverlust aufgetreten.
     
     \item
     Durch das OSPF sind nun alle Router erreichbar und die Pingzeiten haben sich erheblich verbessert, alle sind unter einer Sekunde. Außerdem konnte man feststellen das nun innerhalb des Labors geroutet wurde und auch die Erreichbarkeitszeit von \textit{tracert} hat sich um einiges verbessert.
-    
-    \item
-    \textbf{KEINE AHNUNG WELCHE ZUSÄTZLICH SIND\\
-     BILD HABEN WIR ABER DAZU \\
-     VLT WEIß SVEN MEHR}
-    
-    \item
-    \textbf{ICH WEIß NICHT WAS FÜR EINEN TEXT ICH DAZU SCHREIBEN SOLL VLT FÄLLT SVEN WAS EIN.}
-    
-   \includegraphics[width=10cm]{pping}
-   \label{fig:pping}
-
+	
    \includegraphics[width=10cm]{trace}
    \label{fig:trace}
+   
+   Mittels tracert konnte man nun feststellen, dass statt drei nun nur noch zwei Stellen für den Weg verwendet werden.
+   
+    \item
+   \includegraphics[width=8cm]{routetable}
+   \label{fig:routetable}
+   
+    \item
+    Nachdem wir eine Verbindung von unserem Router zum Router des Nachbarteams gesteckt haben, IP-Adressen zugewiesen und die neue Verbindung im Routing mit einbezogen haben, wird dieser neue Weg beim tracert-Befehl auch genutzt. Das Nachbarteam bestand aus Malte Grebe und Niklas Klatt.
   
     \item
-    \textbf{KEINE NOTIZEN HIERZU :D}
+    Die Kosten können je nach Richtung unterschiedlich gesetzt werden. Mittels des Befehls \textit{ip ospf cost X} konnten die Kosten beliebig gesetzt werden. Somit wurder der Pfad zum Nachbarteam, über den Router 0 teuerer/günstiger. Anschließend wurde mit tracert geprüft ob die Einstellungen auch verwendet werden, welches der Fall zu seinen schien.
 
    \includegraphics[width=10cm]{cost}
    \label{fig:cost}
@@ -574,17 +657,18 @@ Wenn die Differenz null beträgt, dann ist kein Rahmenverlust aufgetreten.
    \includegraphics[width=10cm]{costtrace}
    \label{fig:costtrace}
 
-    
     \item
-    \textbf{BIN MIR HIER NICHT SICHER DESWEGEN WILL ICH KEINEN BULLSHIT REINSCHREIBEN ... SOLLTE ERST SVEN FRAGEN}
-
+    Es wird angenommen dass die Strukut wie in der Aufgabenstellung aufgebaut ist und es wird durch zwei Fälle unterschieden. Der erste Fall ist das wir \textbf{nicht} die STP-Wurzel sind, was bedeutet das unsere Rahmen zuerst über eine überflüssige Verbindung geschickt wird. Der zweite Fall ist das wir die STP-Wurzel \textbf{sind}, dann werden alle Rahmen der anderen Teilnehmer an unsere Switch geschickt was zu einem sehr hohen Datenaufkommen führt.
     \end{enumerate}
 
+\newpage
   \subsection[Aufgabe 7 Auswirkungen IP-Paketlänge]{Auswirkungen IP-Paketlänge}
-  
-  \textbf{CHECK ICH I.WIE NICHT ! bilder und wireshark sind vorhanden ...}
-  
-  
+ 
+    Die Paketlängen der zu sendenden Pakete wurde linear erhöht und bei 1600 Byte wurde festgestellt das die Pakete nun fragmentiert wurden (IP Fragmentation).
+
+ \includegraphics[width=10cm]{ipfrag}
+   \label{fig:ipfrag}
+
   \subsection[Aufgabe 8 Untersuchungen zum Adress Resolution Protocol]{Untersuchungen zum Address Resolution Protocol}
   
   \renewcommand{\labelenumi}{\alph{enumi})}
@@ -603,16 +687,103 @@ Wenn die Differenz null beträgt, dann ist kein Rahmenverlust aufgetreten.
    \label{fig:arpwire}
 
   \item
-  \textbf{WAS SOLL ICH DAZU SCHREIBEN SVEN ?}
+  Die Adress Resolution Protocol Table enthielt nach Aufruf von \textit{show arp} mehrere Einträge.
   
    \includegraphics[width=15cm]{arpshow}
    \label{fig:arpshow}
-
   \end{enumerate}    
 
 %---------------------------------------------------------------------------------------------------------------------------- 
   \newpage
 \section[Versuch 6 Transportschicht]{Transportschicht}
+
+  \subsection[Aufgabe 2 Übertragung von Videodaten]{Übertragung von Videodaten}
+  Zur Übertragung der Daten wurde festgestellt das alle drei Plattformen eine TCP-Verbindung verwenden. 
+  Der Grund für die Verwendung von TCP ist das eine Stau- und Flusskontrolle, bei dieser Variante vorhanden ist, wodurch Segmente die verloren gegangen sind, erneut gesendet werden können. Außerdem ist einer der wichtigsten Vorteile dadurch, dass somit Darstellungsfehler vermieden werden können.\\
+  Andererseits besteht die Möglichkeit, dass die Datenrate bei erhöhtem Verkehr im Netz oder vom \textit{dominanteren} UDP gedrosselt werden kann.
+Im Gegensatz zu TCP kann UDP jedoch nicht versichern ob die Daten überhaupt angekommen sind und ob es die richtige Reihenfolge der Daten ist. Vorteil dabei ist zwar das Daten nicht erneut gesendet werden, im Ukehrschluss führt dies jedoch zu Datenverlust.
   
+  \subsection[Aufgabe 5 WAN-Emulator Bitratenbegrenzung]{WAN-Emulator Bitratenbegrenzung}
+
+Mit dem Befehl \textit{netstat -rn} kann die Routing Tabelle angezeigt werden.
+
+     \includegraphics[width=9cm]{wan}
+   \label{fig:wan}
   
+    \subsection[Aufgabe 6 Verbindungsauf- und abbau]{Verbindungsauf- und abbau}
+
+Der Verbindungsauf- und abbau des Servers und Clients lief wie erwartet, wobei folgende Flags verwendet wurden; SYN, ACK, PHS und RTS.
+
+    \includegraphics[width=10cm]{tcpflow}
+   \label{fig:tcpflow}
+
+    \subsection[Aufgabe 7 Funktionsweise der Flusskontrolle]{Funktionsweise der Flusskontrolle}
+    
+    Man konnte feststellen, dass die Flusskontrolle sofort aktiv wurde, als sich die Fenstergröße linear verringerte un letztendlich null erreichte. Nun können keine weiteren Daten mehr geschickt werden, damit dieser Zustand nicht dauerhaft bleibt, erfolgt folgender Ablauf. 
+    
+    \begin{itemize}
+    \item
+    Server sendet \textit{TCP Window full} und \textit{TCP ZeroWindow} da sich die Kapazität auf null reduziert hat und der Client stoppt. Es wird jedoch ein Byte frei gehalten, damit der Client Testanfragen übermitteln kann.
+
+\item
+  Der Client sendet \textit{ZeroWindowProbe} um festzustellen ob der Server wieder Kapzität zum Empfangen hat.
+
+\item
+Der Server sendet dann das \textit{TCP ZeroWindowProbeAck} bei keiner Veränderung. 
+    
+\item
+Der Server sendet dann ein \textit{TCP Window Update}, wenn Kapazität zum Empfangen der Daten besteht. 
+ \end{itemize}   
+        
+   \subsection[Aufgabe 8 Jperf]{Jperf}
+   
+   Folgende Tabelle stellt die verschiedenen Messeinstelungen und die dazugehörigen Werte dar.
+         \begin{table}[htbp]
+   \centering
+  \begin{tabular}{|llll|}
+\textbf{Interval} & \textbf{Transfer} &\textbf{Bandwidth}\\ \hline
+0.0 - 1.0 sec & 184 KBytes & 1507 Kbits/sec\\
+1.0 - 2.0 sec & 1865 KBytes & 15277 Kbits/sec \\
+2.0 - 3.0 sec & 0.00 KBytes & 0.00 Kbits/sec\\
+3.0 - 4.0 sec & 2047 KBytes & 16770 Kbits/sec\\
+4.0 - 5.0 sec & 0.00 KBytes & 0.00 Kbits/sec\\
+5.0 - 6.0 sec & 2049 KBytes & 16784 Kbits/sec\\
+6.0 - 7.0 sec & 2047 KBytes & 16770 Kbits/sec\\
+7.0 - 8.0 sec & 0.00 KBytes & 0.00 Kbits/sec\\
+8.0 - 9.0 sec & 2049 KBytes & 16784 Kbits/sec\\
+9.0 - 10.0 sec & 0.00 KBytes & 0.00 Kbits/sec\\
+0.0 - 10.3 sec & 12288 KBytes & 9772 Kbits/sec\\
+    \end{tabular}
+    \label{tab:tcp}
+   \end{table}\\
+   Die Einstellungen die für den ersten Test eingestellt wurden, sind das die Buffer Length auf 2 Mbytes und TCP Windows Size auf 1 Mbyte gesetzt wurde.
+
+    \includegraphics[width=8cm]{8tcp}
+    \label{fig:8tcp}
+    
+        \includegraphics[width=8cm]{8udp}
+    \label{fig:8udp}
+    
+        \includegraphics[width=8cm]{2tcp}
+    \label{fig:2tcp}
+    
+        \includegraphics[width=8cm]{2udp}
+    \label{fig:2udp}
+   
+   \newpage
+      \subsection[Aufgabe 9 Paralllele Übertragung]{Parallele Übertragung}
+
+	Um den gewünschen Effekt zu erreichen hat die Partnergruppe bestehend aus Malte Grebe und Niklas Klatt die Rolle der Clients angenommen, wobei die andere Gruppe die Serverrolle übernommen hat. Jeweils einer aus den beiden Gruppen übernahm dann die Einstellungen der TCP oder der UDP Verbindung.\\
+      Folgender Graph stellt eine TCP Verbidung da, die mittendrin abgebrochen wird, da UDP in dem Moment anfängt zu senden.\\    
+      \includegraphics[width=5cm]{tcp}
+   \label{fig:tcp}
+      
+      An diesem und an dem Graph der Clienten wurde festegestellt, das UDP den TCP Strom unterdrückt solange er sendet.\\    
+      \includegraphics[width=5cm]{udp}
+   \label{fig:udp}
+
+      
+      
+      
 \end{document}
+

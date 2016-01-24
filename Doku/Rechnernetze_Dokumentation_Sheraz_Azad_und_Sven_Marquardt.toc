@@ -12,27 +12,36 @@
 \contentsline {subsection}{\numberline {2.2}Aufgabe 3 Messung der Bitfehlerrate}{9}{subsection.2.2}
 \contentsline {subsection}{\numberline {2.3}Aufgabe 4 Vor\IeC {\"u}berlegungen zum sicheren Protokoll}{9}{subsection.2.3}
 \contentsline {subsection}{\numberline {2.4}Aufgabe 6 Verhinderung von Rahmenverlusten}{10}{subsection.2.4}
-\contentsline {section}{\numberline {3}Versuch 3 Anwendungsschicht und Tools}{11}{section.3}
-\contentsline {subsection}{\numberline {3.1}Aufgabe 4 nslookup tool}{11}{subsection.3.1}
-\contentsline {subsection}{\numberline {3.2}Aufgabe 6 Aufbau von Websiten}{13}{subsection.3.2}
-\contentsline {subsection}{\numberline {3.3}Aufgabe 7 Laden von Websiten}{14}{subsection.3.3}
-\contentsline {subsection}{\numberline {3.4}Aufgabe 8 SSL/TLS im Browser}{15}{subsection.3.4}
-\contentsline {subsection}{\numberline {3.5}Aufgabe 9 SSL/TLS beim Server}{16}{subsection.3.5}
-\contentsline {subsection}{\numberline {3.6}Aufgabe 10 Auswertung von Cookies}{17}{subsection.3.6}
-\contentsline {subsection}{\numberline {3.7}Aufgabe 11 Diskussion AddOns}{17}{subsection.3.7}
-\contentsline {subsection}{\numberline {3.8}Aufgabe 12 Steganographie}{18}{subsection.3.8}
-\contentsline {section}{\numberline {4}Versuch 4 Switch}{19}{section.4}
-\contentsline {subsection}{\numberline {4.1}Aufgabe 3 MAC-Adresse}{19}{subsection.4.1}
-\contentsline {subsection}{\numberline {4.2}Aufgabe 4 Beobachtungen im Netz}{20}{subsection.4.2}
-\contentsline {subsection}{\numberline {4.3}Aufgabe 5 Spanning Tree Protocol}{21}{subsection.4.3}
-\contentsline {subsection}{\numberline {4.4}Aufgabe 6 Lernen von Adressen f\IeC {\"u}r die MAC-Adresstabelle}{23}{subsection.4.4}
-\contentsline {subsection}{\numberline {4.5}Aufgabe 7 Erstellen eines VLANs mit der Nummer 100}{24}{subsection.4.5}
-\contentsline {subsection}{\numberline {4.6}Aufgabe 8 VLAN-Trunk-Konfiguration}{26}{subsection.4.6}
-\contentsline {section}{\numberline {5}Versuch 5 Router}{28}{section.5}
-\contentsline {subsection}{\numberline {5.1}Aufgabe 2 Traceroute (tracert)}{28}{subsection.5.1}
-\contentsline {subsection}{\numberline {5.2}Aufgabe 4 Erstellen der IP-Adressen f\IeC {\"u}r Interfaces und Netze}{28}{subsection.5.2}
-\contentsline {subsection}{\numberline {5.3}Aufgabe 5 Konfiguration von DHCP zur dynamischen Adresszuweisung}{28}{subsection.5.3}
-\contentsline {subsection}{\numberline {5.4}Augabe 6 Konfiguration von OSPF als Routing-Protokoll}{29}{subsection.5.4}
-\contentsline {subsection}{\numberline {5.5}Aufgabe 7 Auswirkungen IP-Paketl\IeC {\"a}nge}{32}{subsection.5.5}
-\contentsline {subsection}{\numberline {5.6}Aufgabe 8 Untersuchungen zum Adress Resolution Protocol}{33}{subsection.5.6}
-\contentsline {section}{\numberline {6}Versuch 6 Transportschicht}{35}{section.6}
+\contentsline {subsection}{\numberline {2.5}Aufgabe 7 Bitfehlerkorrektur (r\IeC {\"u}ckw\IeC {\"a}rts)}{10}{subsection.2.5}
+\contentsline {subsection}{\numberline {2.6}Aufgabe 8 Bitfehlerkorrektur (vorw\IeC {\"a}rts)}{10}{subsection.2.6}
+\contentsline {subsection}{\numberline {2.7}Aufgabe 9 Messung der Round-Trip-Time}{11}{subsection.2.7}
+\contentsline {section}{\numberline {3}Versuch 3 Anwendungsschicht und Tools}{12}{section.3}
+\contentsline {subsection}{\numberline {3.1}Aufgabe 4 nslookup tool}{12}{subsection.3.1}
+\contentsline {subsection}{\numberline {3.2}Aufgabe 6 Aufbau von Websiten}{14}{subsection.3.2}
+\contentsline {subsection}{\numberline {3.3}Aufgabe 7 Laden von Websiten}{15}{subsection.3.3}
+\contentsline {subsection}{\numberline {3.4}Aufgabe 8 SSL/TLS im Browser}{16}{subsection.3.4}
+\contentsline {subsection}{\numberline {3.5}Aufgabe 9 SSL/TLS beim Server}{17}{subsection.3.5}
+\contentsline {subsection}{\numberline {3.6}Aufgabe 10 Auswertung von Cookies}{18}{subsection.3.6}
+\contentsline {subsection}{\numberline {3.7}Aufgabe 11 Diskussion AddOns}{18}{subsection.3.7}
+\contentsline {subsection}{\numberline {3.8}Aufgabe 12 Steganographie}{19}{subsection.3.8}
+\contentsline {section}{\numberline {4}Versuch 4 Switch}{20}{section.4}
+\contentsline {subsection}{\numberline {4.1}Aufgabe 3 MAC-Adresse}{20}{subsection.4.1}
+\contentsline {subsection}{\numberline {4.2}Aufgabe 4 Beobachtungen im Netz}{21}{subsection.4.2}
+\contentsline {subsection}{\numberline {4.3}Aufgabe 5 Spanning Tree Protocol}{22}{subsection.4.3}
+\contentsline {subsection}{\numberline {4.4}Aufgabe 6 Lernen von Adressen f\IeC {\"u}r die MAC-Adresstabelle}{24}{subsection.4.4}
+\contentsline {subsection}{\numberline {4.5}Aufgabe 7 Erstellen eines VLANs mit der Nummer 100}{26}{subsection.4.5}
+\contentsline {subsection}{\numberline {4.6}Aufgabe 8 VLAN-Trunk-Konfiguration}{27}{subsection.4.6}
+\contentsline {section}{\numberline {5}Versuch 5 Router}{29}{section.5}
+\contentsline {subsection}{\numberline {5.1}Aufgabe 2 Traceroute (tracert)}{29}{subsection.5.1}
+\contentsline {subsection}{\numberline {5.2}Aufgabe 4 Erstellen der IP-Adressen f\IeC {\"u}r Interfaces und Netze}{31}{subsection.5.2}
+\contentsline {subsection}{\numberline {5.3}Aufgabe 5 Konfiguration von DHCP zur dynamischen Adresszuweisung}{31}{subsection.5.3}
+\contentsline {subsection}{\numberline {5.4}Augabe 6 Konfiguration von OSPF als Routing-Protokoll}{33}{subsection.5.4}
+\contentsline {subsection}{\numberline {5.5}Aufgabe 7 Auswirkungen IP-Paketl\IeC {\"a}nge}{37}{subsection.5.5}
+\contentsline {subsection}{\numberline {5.6}Aufgabe 8 Untersuchungen zum Adress Resolution Protocol}{37}{subsection.5.6}
+\contentsline {section}{\numberline {6}Versuch 6 Transportschicht}{40}{section.6}
+\contentsline {subsection}{\numberline {6.1}Aufgabe 2 \IeC {\"U}bertragung von Videodaten}{40}{subsection.6.1}
+\contentsline {subsection}{\numberline {6.2}Aufgabe 5 WAN-Emulator Bitratenbegrenzung}{40}{subsection.6.2}
+\contentsline {subsection}{\numberline {6.3}Aufgabe 6 Verbindungsauf- und abbau}{41}{subsection.6.3}
+\contentsline {subsection}{\numberline {6.4}Aufgabe 7 Funktionsweise der Flusskontrolle}{41}{subsection.6.4}
+\contentsline {subsection}{\numberline {6.5}Aufgabe 8 Jperf}{42}{subsection.6.5}
+\contentsline {subsection}{\numberline {6.6}Aufgabe 9 Paralllele \IeC {\"U}bertragung}{44}{subsection.6.6}
